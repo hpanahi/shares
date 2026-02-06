@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test Note for Sharing</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #24292f;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1012px;
+    margin: 0 auto;
+    padding: 32px 16px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  h1 {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #d0d7de;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #d0d7de;
+  }
+
+  h3 { font-size: 1.25em; }
+  h4 { font-size: 1em; }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: #0969da;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2em;
+  }
+
+  li + li {
+    margin-top: 0.25em;
+  }
+
+  blockquote {
+    margin: 0 0 16px 0;
+    padding: 0 1em;
+    color: #57606a;
+    border-left: 0.25em solid #d0d7de;
+  }
+
+  blockquote > :first-child {
+    margin-top: 0;
+  }
+
+  blockquote > :last-child {
+    margin-bottom: 0;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+    font-size: 85%;
+    padding: 0.2em 0.4em;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+  }
+
+  pre code {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 100%;
+  }
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: auto;
+    overflow: auto;
+    display: block;
+  }
+
+  table th, table td {
+    padding: 6px 13px;
+    border: 1px solid #d0d7de;
+  }
+
+  table th {
+    font-weight: 600;
+    background-color: #f6f8fa;
+  }
+
+  table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+
+  hr {
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #d0d7de;
+    border: 0;
+  }
+
+  img {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .task-list-item {
+    list-style-type: none;
+  }
+
+  .task-list-item input {
+    margin: 0 0.2em 0.25em -1.6em;
+    vertical-align: middle;
+  }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid #d0d7de;
+    color: #57606a;
+    font-size: 14px;
+  }
+
+  footer a {
+    color: #57606a;
+  }
+
+  footer a:hover {
+    color: #0969da;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1 id="test-note-for-sharing">Test Note for Sharing</h1>
+<p>This is a test note to verify the <code>/share</code> command works
+correctly.</p>
+<h2 id="wikilinks">Wikilinks</h2>
+<p>Here is a Note Name reference and a display text reference.</p>
+<h2 id="image-embeds">Image Embeds</h2>
+<p>This should be stripped:</p>
+<p>And this inline one too:</p>
+<h2 id="regular-content">Regular Content</h2>
+<ul>
+<li>Bullet point one</li>
+<li>Bullet point two</li>
+<li>Bullet point three</li>
+</ul>
+<blockquote>
+<p>This is a blockquote that should render nicely.</p>
+</blockquote>
+<h3 id="code-block">Code Block</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hello():</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span></code></pre></div>
+<h3 id="table">Table</h3>
+<table>
+<thead>
+<tr>
+<th>Column A</th>
+<th>Column B</th>
+<th>Column C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One</td>
+<td>Two</td>
+<td>Three</td>
+</tr>
+<tr>
+<td>Four</td>
+<td>Five</td>
+<td>Six</td>
+</tr>
+</tbody>
+</table>
+<p>That’s it!</p>
+<footer>
+  <a href="https://hes.am">hes.am</a>
+</footer>
+</div>
+</body>
+</html>
