@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Compound Lilie: Systems-Level Learning Experience Design</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #24292f;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1012px;
+    margin: 0 auto;
+    padding: 32px 16px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  h1 {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #d0d7de;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #d0d7de;
+  }
+
+  h3 { font-size: 1.25em; }
+  h4 { font-size: 1em; }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: #0969da;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2em;
+  }
+
+  li + li {
+    margin-top: 0.25em;
+  }
+
+  blockquote {
+    margin: 0 0 16px 0;
+    padding: 0 1em;
+    color: #57606a;
+    border-left: 0.25em solid #d0d7de;
+  }
+
+  blockquote > :first-child {
+    margin-top: 0;
+  }
+
+  blockquote > :last-child {
+    margin-bottom: 0;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+    font-size: 85%;
+    padding: 0.2em 0.4em;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
+  }
+
+  pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+  }
+
+  pre code {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 100%;
+  }
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: auto;
+    overflow: auto;
+    display: block;
+  }
+
+  table th, table td {
+    padding: 6px 13px;
+    border: 1px solid #d0d7de;
+  }
+
+  table th {
+    font-weight: 600;
+    background-color: #f6f8fa;
+  }
+
+  table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+
+  hr {
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #d0d7de;
+    border: 0;
+  }
+
+  img {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .task-list-item {
+    list-style-type: none;
+  }
+
+  .task-list-item input {
+    margin: 0 0.2em 0.25em -1.6em;
+    vertical-align: middle;
+  }
+
+</style>
+</head>
+<body>
+<div class="container">
+<h1
+id="compound-lilie-systems-level-learning-experience-design">Compound
+Lilie: Systems-Level Learning Experience Design</h1>
+<p><em>Extending Compound Learning Experience Design from course-level
+to institutional-level thinking.</em></p>
+<hr />
+<h2 id="part-1-the-premise">Part 1: The Premise</h2>
+<p>Kieran Klaassen’s insight in Compound Engineering is deceptively
+simple: “A system that produces code is more valuable than any
+individual piece of code.” Replace one word and the premise for Lilie
+becomes clear:</p>
+<p><strong>A system that produces learning experiences is more valuable
+than any individual course.</strong></p>
+<p>The difference matters. A course that improves semester over semester
+is good. A <em>system</em> that compounds — where every design decision,
+every faculty observation, every student reflection makes the entire
+ecosystem permanently smarter — is something else entirely.</p>
+<p>The Compound Learning Experience Design note already maps this at the
+course level: compound ledgers that capture design decisions with the
+fix <em>and the reason</em>, grading agents that accumulate calibration
+data, the Intro to Design → Disco → DBS pipeline as a capability handoff
+chain. That work is real and it’s already happening.</p>
+<p>But all of it operates within individual courses or the connections
+between them. None of it addresses the question one level up: does Lilie
+itself compound?</p>
+<hr />
+<h2 id="part-2-where-lilie-already-compounds-and-where-it-doesnt">Part
+2: Where Lilie Already Compounds (and Where It Doesn’t)</h2>
+<h3 id="what-already-exists">What Already Exists</h3>
+<p>Lilie has institutional taste. It’s real. You can feel it in how
+courses are designed, how faculty talk to students, how the program
+positions itself relative to traditional academic departments. The taste
+lives in several places:</p>
+<p><strong>The Teaching Manifesto</strong> — Eight principles that
+define Lilie’s identity: 1. The experience matters (ungoogleable wisdom,
+not commoditized lectures) 2. We recognize the whole student 3. Process
+matters most in evaluation 4. We experiment to get better 5. Rigorous
+AND inspiring 6. Collapse the hierarchy — we are approachable 7. Courses
+are portals to the larger Lilie community 8. Students are navigating
+ambiguity with courage, and we support that</p>
+<p><strong>The First Principles for Venture Creation at Lilie</strong> —
+Pedagogical commitments for the venture creation courses: AI as thinking
+partner with humans in the loop, accept teams at any stage, minimize the
+gap between real-world velocity and classroom pace, go beyond
+traditional customer discovery, support urgency, be an energy
+amplifier.</p>
+<p><strong>Course Design Philosophies</strong> — The DBS Course Design
+Philosophy encodes nine principles drawing on Farza, Jason Fried, Simon
+Sarris, Unreasonable Hospitality, and TLS. The Intro to Design and Disco
+courses have their own evolving design documents.</p>
+<p><strong>Language Conventions</strong> — “Builder” not “student.”
+“Ship” not “submit.” “Faculty” not “instructor.” These aren’t just
+preferences; they signal identity and values.</p>
+<p><strong>Kyle’s Practices</strong> — Priority and care for founders,
+removal of friction, proactive accountability, not infantilizing
+entrepreneurship. These live in how Kyle operates, not in a
+document.</p>
+<h3 id="the-gap">The Gap</h3>
+<p>All of this exists. None of it is connected. There is no capture →
+encode → verify loop at the institutional level.</p>
+<p>The Teaching Manifesto is aspirational but static. Principle IV
+literally says “we experiment to get better” — but there is no system
+for capturing what those experiments taught. When a faculty member
+discovers that a particular activity transforms the room, where does
+that knowledge go? Into their memory. When they leave or the semester
+ends, the lesson goes with them.</p>
+<p>The First Principles document captures beliefs, not design patterns.
+It says <em>what we value</em> but not <em>what we do differently
+because of those values</em>, or <em>what we tried that didn’t
+work</em>. The Course User Guides work is starting to address this — but
+it’s early, and it’s happening course by course, not system-wide.</p>
+<h3 id="the-9010-problem">The 90/10 Problem</h3>
+<p>Klaassen’s 50/50 rule says half of engineering time should go to
+improving the system, not just shipping features. Lilie’s ratio is
+closer to 90/10, and it’s a bandwidth issue, not a choice. Almost all
+energy goes to running programs — teaching courses, managing
+co-curriculars, advising students, administering the program. System
+improvement happens in gaps that rarely exist.</p>
+<p>Faculty alignment sessions happen occasionally. Course user guides
+are being developed. The capability handoff concept is emerging. But all
+of this is extra — the first thing to get cut when the semester gets
+busy. System improvement has no structural home at Lilie.</p>
+<p>This is exactly the dynamic Klaassen describes: “Work that isn’t a
+feature feels like distraction — something done with spare time (which
+never exists).” For Lilie, read: work that isn’t directly serving
+students feels like a luxury.</p>
+<h3 id="current-stage-between-0-and-1">Current Stage: Between 0 and
+1</h3>
+<p>Faculty mostly design alone. Shared principles exist but aren’t
+operationalized. The Teaching Manifesto is referenced but not enforced
+through structure. Faculty are just starting to design the connections
+between Lilie’s offerings.</p>
+<hr />
+<h2 id="part-3-the-mapping-compound-engineering-compound-lilie">Part 3:
+The Mapping — Compound Engineering → Compound Lilie</h2>
+<p>The Compound Learning Experience Design note mapped the analogy at
+the course level. Here is the systems-level mapping:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Compound Engineering</th>
+<th>Compound Lilie (Systems Level)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLAUDE.md captures taste and decisions</td>
+<td>Lilie’s institutional taste: Manifesto + First Principles + design
+patterns + language conventions — currently scattered, not
+connected</td>
+</tr>
+<tr>
+<td>Plan → Work → Review → Compound</td>
+<td>Design → Teach → Assess → Encode</td>
+</tr>
+<tr>
+<td>Specialized agents with different expertise</td>
+<td>Faculty, TAs, co-curricular programs, mentorship network, alumni,
+competition coaches</td>
+</tr>
+<tr>
+<td>The codebase</td>
+<td>The curriculum + co-curricular ecosystem</td>
+</tr>
+<tr>
+<td>Tests and safety nets</td>
+<td>Capability handoffs, teaching evaluations, student reflections,
+room-reading</td>
+</tr>
+<tr>
+<td>50/50 rule: half the time on system improvement</td>
+<td>Structural time for improving the learning machine, not just running
+programs</td>
+</tr>
+<tr>
+<td>Extract taste into the system</td>
+<td>Make implicit “how we do things at Lilie” explicit, inheritable, and
+compounding</td>
+</tr>
+<tr>
+<td>Agent-native architecture: system can see everything</td>
+<td>Can Lilie “see” student outcomes across all touchpoints — courses,
+co-curriculars, mentorship, competitions?</td>
+</tr>
+<tr>
+<td>Plans are the new code</td>
+<td>Course user guides as the primary artifact, not individual session
+plans or syllabi</td>
+</tr>
+<tr>
+<td>Three questions before approving output</td>
+<td>Three questions before approving a course design: What was the
+hardest decision? What alternatives did you reject? What are you least
+confident about?</td>
+</tr>
+</tbody>
+</table>
+<p>The most interesting parallel might be the last one. Klaassen asks
+three questions before accepting AI output — designed to surface the
+thinking behind the work, not just the work itself. What if Lilie asked
+the same three questions before every course design got finalized? Not
+as compliance, but as a compound ritual: the answers become permanent
+institutional knowledge about <em>how design decisions get made
+here</em>.</p>
+<h3 id="where-the-analogy-breaks">Where the Analogy Breaks</h3>
+<p>The table above presents the mapping cleanly. It’s not clean.</p>
+<p>Software systems don’t have egos. A codebase doesn’t resist being
+refactored. When Klaassen encodes a pattern into CLAUDE.md, the system
+doesn’t feel threatened — it just gets better. Faculty are not agents.
+They have identities, creative investments, years of hard-won intuition.
+Encoding a faculty member’s best teaching moves into a course user guide
+isn’t like extracting a coding pattern into a config file. It’s more
+like asking a chef to write down the recipe for the dish they cook by
+feel — and then telling them someone else will cook it.</p>
+<p>Code is also deterministic in a way that teaching isn’t. A
+well-encoded software pattern produces the same result every time. A
+well-encoded teaching pattern — “use the paper clip challenge to teach
+value creation” — produces wildly different outcomes depending on who’s
+in the room, what energy they bring, what happened ten minutes before.
+The system can encode <em>what</em> to do; it cannot encode the judgment
+about <em>whether this is the right moment to do it</em>.</p>
+<p>And software compounds continuously — every commit, every merged PR.
+Teaching compounds in semester-long cycles with months of lag between
+action and feedback. You can’t A/B test a course design the way you test
+a feature flag. By the time you know whether an encoded lesson actually
+improved outcomes, you’ve already designed the next semester.</p>
+<p>These aren’t reasons to abandon the analogy. They’re reasons to hold
+it honestly: compound engineering gives Lilie a vocabulary and a
+structure, but the domain demands patience, humility about what’s
+encodable, and respect for the parts of teaching that resist
+systematization.</p>
+<hr />
+<h2 id="part-4-the-five-stages-for-lilie">Part 4: The Five Stages for
+Lilie</h2>
+<p>Klaassen describes five adoption stages for compound engineering.
+Mapped to Lilie:</p>
+<h3 id="stage-0-manual-development-each-faculty-designs-alone">Stage 0:
+Manual Development → Each Faculty Designs Alone</h3>
+<p>Every course is its own world. Faculty bring their expertise and
+experience, but there’s no shared system for how courses are designed.
+Knowledge lives in heads.</p>
+<h3
+id="stage-1-chat-based-assistance-shared-principles-exist-and-are-referenced">Stage
+1: Chat-Based Assistance → Shared Principles Exist and Are
+Referenced</h3>
+<p>The Teaching Manifesto and First Principles exist. Faculty can
+reference them. They influence design the way a helpful article
+influences coding — useful context, but the work is still entirely
+manual. You know the principles, but they don’t structure your design
+process.</p>
+<p><strong>This is roughly where Lilie is now — between 0 and
+1.</strong></p>
+<h3
+id="stage-2-agentic-tools-with-line-by-line-review-course-user-guides-encode-design-decisions">Stage
+2: Agentic Tools with Line-by-Line Review → Course User Guides Encode
+Design Decisions</h3>
+<p>Course user guides capture design reasoning at the course level.
+Faculty use compound ledgers to record what worked and what didn’t. But
+faculty still gate every design decision — the guides inform, they don’t
+generate.</p>
+<p>This is analogous to Klaassen’s “gatekeeper” stage: the system has
+knowledge, but humans approve or reject everything it suggests. For
+Lilie, this means: the guides tell you <em>why</em> the DP1 dry run
+exists, but a new faculty member still needs to design their own version
+of it.</p>
+<h3 id="stages-35-where-the-analogy-outruns-the-reality">Stages 3–5:
+Where the Analogy Outruns the Reality</h3>
+<p>Klaassen’s later stages describe a world where the system generates
+code from plans (Stage 3), handles entire features autonomously (Stage
+4), and runs parallel workstreams from the same compound base (Stage
+5).</p>
+<p>For software, this trajectory makes sense. For an educational
+institution where the irreducible human element isn’t a bottleneck to
+eliminate but <em>the actual product</em>, it’s not clear these stages
+even apply — or that reaching them would be desirable. A system that can
+“generate a learning experience from a plan” might produce something
+that looks right on paper and feels hollow in the room. The later stages
+of compound engineering optimize for removing the human from the loop.
+The later stages of compound Lilie might need to optimize for
+<em>keeping the human in the loop while making the loop
+smarter</em>.</p>
+<p>Worth imagining, not worth planning for. The real work is 0 → 1 →
+2.</p>
+<hr />
+<h3 id="what-each-transition-actually-requires">What Each Transition
+Actually Requires</h3>
+<p><strong>0 → 1 (where Lilie is now):</strong> Make existing principles
+visible and referenced in design work. Ensure the Teaching Manifesto and
+First Principles are actually consulted when designing courses, not just
+acknowledged. This sounds trivial. It’s not — it requires faculty to see
+these documents as <em>theirs</em>, not as institutional overhead.</p>
+<p><strong>1 → 2:</strong> Build course user guides with compound
+ledgers for every course. Establish the semester-end encoding ritual.
+Create capability handoff contracts between courses. This is the
+critical infrastructure step — and it’s the step that the 90/10
+bandwidth problem makes hardest. The infrastructure doesn’t build
+itself, and it doesn’t maintain itself either (see: The Cost of
+Compounding, below).</p>
+<hr />
+<h2 id="part-5-the-identity-question">Part 5: The Identity Question</h2>
+<p>This is the hardest part. And it’s personal.</p>
+<h3 id="the-engineering-version">The Engineering Version</h3>
+<p>Klaassen writes: “Developers subconsciously see AI-assisted
+development as an identity attack… the code was never really yours. It
+belongs to the team, the product, and the users.” His reframe: “You did
+the thinking. All the AI did was the writing.”</p>
+<h3 id="the-lilie-version">The Lilie Version</h3>
+<p>Course design is self-expression. The choices about what goes on a
+slide, when to pause, how to phrase a prompt, when to pivot an activity
+because you’re reading the room — these feel like craft. Like art.
+Encoding them into a system feels like losing the thing that makes your
+teaching <em>yours</em>.</p>
+<p>This tension exists on two levels:</p>
+<p><strong>The personal version.</strong> I’ve spent years developing
+taste — about how to design an experience, how to read a room, how to
+use language intentionally, how to create the conditions for
+transformation. Encoding that taste into a document or a system feels
+like it could flatten it. The compound ledger says “don’t over-explain
+extreme users — the understanding comes from doing.” But the
+<em>way</em> I don’t over-explain, the specific judgment call in the
+moment, the reading of <em>this</em> room on <em>this</em> day — that’s
+not encodable. Or is it?</p>
+<p><strong>The cultural version.</strong> Faculty could see
+systematization as threatening. If the system “knows” how to design a
+Lilie course, what does that say about the faculty member’s role? If
+course user guides encode design reasoning so well that a new faculty
+member can deliver the experience, does that devalue the expertise of
+the person who created it?</p>
+<h3 id="the-voice-that-doesnt-want-this">The Voice That Doesn’t Want
+This</h3>
+<p>There is a faculty member — maybe real, maybe composite, but real
+enough — who hears “compound system” and feels something between
+skepticism and dread. Their teaching is a live performance. They’ve
+spent a career learning to read a room, to feel when the energy shifts,
+to know when to abandon the plan and follow the moment. Their best class
+sessions weren’t designed — they emerged.</p>
+<p>Asking them to write that down in a course user guide feels like
+asking a jazz musician to notate their improvisation. The notation isn’t
+the music. The guide isn’t the teaching. And the suggestion that it
+<em>could be</em> — that someone else could read the guide and reproduce
+the experience — isn’t liberating. It’s insulting. It says: what you do
+isn’t as special as you think it is. It’s reducible. It’s transferable.
+It’s <em>encodable</em>.</p>
+<p>This person isn’t wrong. A lot of great teaching <em>is</em>
+irreducible. The question is whether <em>all</em> of it is — or whether
+some of what feels like irreducible craft is actually repeatable pattern
+dressed up as intuition. The paper clip challenge works every time not
+because of the faculty member’s in-the-moment genius, but because the
+activity structure is good. That structure is encodable. The judgment
+about <em>when to deploy it</em> and <em>how to adapt it to this
+room</em> might not be.</p>
+<p>The document needs to sit with this tension rather than resolve it.
+The reframe below is available, but it won’t land for everyone — and
+forcing it will create resistance that makes compounding harder, not
+easier.</p>
+<h3 id="the-reframe-for-those-ready-to-hear-it">The Reframe (For Those
+Ready to Hear It)</h3>
+<p>Klaassen’s answer: “You did the design thinking. The system just
+executed the experience.”</p>
+<p>The compound system doesn’t replace the faculty member’s judgment. It
+replaces the <em>re-invention</em> that happens when judgment isn’t
+captured. Every semester, every new faculty member, every new course
+currently starts from a version of zero — informed by memory and
+principles, but not by the accumulated design intelligence of everyone
+who came before.</p>
+<p>The liberating possibility: compound systems free you to do
+<em>higher-order</em> design work. If the system handles the patterns —
+the known-good activity structures, the proven language choices, the
+tested assessment approaches — faculty attention goes to the things that
+actually require human presence: reading this room, adapting to this
+moment, seeing this student.</p>
+<p>The system handles what <em>should be encoded</em>. The human handles
+what <em>requires judgment</em>.</p>
+<p>But here’s the honest caveat: this reframe works when the faculty
+member trusts the system and had a hand in building it. Imposed from
+above, a compound system feels like surveillance. Built collaboratively
+— “we’re encoding <em>our</em> collective intelligence, not replacing
+<em>your</em> individual expertise” — it might feel like something worth
+contributing to. The difference between those two experiences is the
+difference between a system that compounds and a system that gets
+ignored.</p>
+<blockquote>
+<p><strong>The open question:</strong> Where is the line between
+encodable design decisions and irreducible human judgment? And does that
+line move as the system gets smarter? And who gets to decide where the
+line is — the system designer, or the person whose judgment is being
+encoded?</p>
+</blockquote>
+<hr />
+<h2 id="part-6-the-main-loop-for-lilie">Part 6: The Main Loop for
+Lilie</h2>
+<p>Klaassen’s loop: <strong>Plan → Work → Review → Compound</strong></p>
+<p>Lilie’s loop: <strong>Design → Teach → Assess → Encode →
+Verify</strong></p>
+<h3 id="design">Design</h3>
+<p>Strategic planning informed by encoded institutional knowledge. Not
+starting from scratch, but from what the system already knows: what
+worked, what didn’t, what the compound ledger says about this type of
+activity or this point in the semester.</p>
+<p>At the institutional level: which courses run, how they connect, what
+the capability pipeline looks like, where the co-curricular programs
+amplify the curricular ones.</p>
+<h3 id="teach">Teach</h3>
+<p>Running the semester. Courses, co-curriculars, mentorship,
+competitions, speaker series. This is where 90% of energy currently goes
+— and should. The teaching <em>is</em> the product.</p>
+<p>But during teaching, <em>capture</em> happens. Session notes,
+thinking notes, tic tocs, room-reading observations, TA sync
+conversations. This raw material already exists. The compound question
+is: does it go anywhere permanent?</p>
+<h3 id="assess">Assess</h3>
+<p>Multiple feedback channels, not just end-of-semester evaluations: -
+Student reflections (DP1/DP2, Disco reflections) - Teaching evaluations
+- TA observations and sync notes - Room-reading in real time - Outcomes
+data (what did students actually become capable of?) - Gallery crits and
+demo day performance - Peer feedback</p>
+<p>Student reflections are underused as design intelligence. When 8 out
+of 10 students say “I didn’t understand extreme users until I actually
+observed one,” that’s not just assessment data — it’s a permanent design
+lesson.</p>
+<h3 id="encode">Encode</h3>
+<p>The critical step. The semester-end ritual where lessons become
+permanent design decisions.</p>
+<p>What this looks like at the institutional level: - Course user guides
+absorb specific design decisions — prescriptive, not descriptive. Not
+“students struggled with X” but “do Y because students struggled with X
+in Spring 2026.” - Capability handoff contracts update based on what
+actually transferred between courses - The compound ledger records what
+the system learned and when - The Teaching Manifesto stays constant
+(identity); the design patterns evolve (practice)</p>
+<p>This is the step that currently doesn’t happen systematically.
+There’s no protected time for it, no ritual, no shared expectation that
+encoding is part of the work.</p>
+<h3 id="verify">Verify</h3>
+<p>The missing piece in the current system. The systematic check: - Did
+the encoded lessons actually change the design? - Did the changed design
+actually change outcomes?</p>
+<p>Without verification, encoding is just documentation. With it, the
+system has a feedback loop that proves it’s compounding.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Compound Engineering</th>
+<th>Current Lilie Practice</th>
+<th>Compound Lilie (Target)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capture</td>
+<td>CLAUDE.md updated during work</td>
+<td>Session notes, thinking notes, tic tocs, TA syncs</td>
+<td>Same — already strong</td>
+</tr>
+<tr>
+<td>Encode</td>
+<td>Tests, rules, agent instructions</td>
+<td>Rubrics, course design philosophy, First Principles</td>
+<td>Compound ledger per course, capability handoff contracts,
+institutional design patterns</td>
+</tr>
+<tr>
+<td>Verify</td>
+<td>Evals run automatically</td>
+<td>???</td>
+<td>Semester-end check: did encoded lessons change the design? Did
+changed design change outcomes?</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-cost-of-compounding">The Cost of Compounding</h2>
+<p>Klaassen’s article is an argument for compounding. It doesn’t spend
+much time on the cost — because in software, the cost is relatively low.
+Update CLAUDE.md, add a test, merge the PR. Done.</p>
+<p>In an educational institution, the cost is higher and ongoing.</p>
+<p><strong>Maintenance is the hidden tax.</strong> Every compound
+artifact — every course user guide, every capability handoff contract,
+every entry in the compound ledger — requires upkeep. A guide that
+described Spring 2026’s DP1 process accurately becomes misleading by
+Fall 2026 if the process evolved and nobody updated the guide. A
+capability handoff contract that says “Intro to Design produces
+observation skills” but doesn’t reflect a recent curriculum change
+creates false confidence downstream. A compound system that falls out of
+sync with reality is worse than having no system at all, because people
+trust it.</p>
+<p>The 90/10 problem isn’t just about finding time to <em>build</em> the
+compound system. It’s about the permanent commitment to
+<em>maintain</em> it. Building a course user guide is a one-semester
+project. Keeping it alive is a multi-year obligation. If Lilie can’t
+protect time for that ongoing work, the compound system becomes another
+artifact that was exciting to create and slowly becomes irrelevant — the
+institutional equivalent of documentation that nobody reads because
+nobody updates.</p>
+<p><strong>Premature encoding creates rigidity.</strong> Not every
+lesson from a semester deserves to be permanent. Some things worked
+because of the specific students in the room, the specific moment in the
+culture, the specific energy of a particular week. Encoding those
+lessons as universal design decisions — “always do X” — creates rules
+where there should be judgment calls. The compound system needs a way to
+distinguish between lessons that are genuinely permanent (“the
+understanding of extreme users comes from doing, not explaining”) and
+lessons that were contextual (“this cohort responded well to Y”). Not
+everything that worked should be encoded. Some things should just be
+remembered.</p>
+<p><strong>The system needs to know what it doesn’t know.</strong> A
+compound ledger that only records successes and fixes — “we changed X
+and it worked” — creates a false picture of certainty. It also needs to
+record open questions, unresolved tensions, things that worked but
+nobody is sure why. The most honest compound entry might be: “We tried Z
+in Spring 2026. It seemed to work. We don’t know if it was the activity
+or the cohort. Try it again in Fall 2026 and see.”</p>
+<hr />
+<h2 id="part-7-what-lilies-claude.md-would-look-like">Part 7: What
+Lilie’s “CLAUDE.md” Would Look Like</h2>
+<p>Not one document. A connected system where each part plays a distinct
+role:</p>
+<h3 id="what-stays-constant-identity-and-values">What Stays Constant —
+Identity and Values</h3>
+<p><strong>The Teaching Manifesto.</strong> The eight principles that
+define what Lilie <em>is</em>. These shouldn’t change often. They’re the
+equivalent of a company’s mission statement — the thing you reference to
+check whether a design decision is <em>ours</em>.</p>
+<p><strong>The First Principles for Venture Creation at Lilie.</strong>
+Pedagogical commitments specific to the venture creation courses. The
+line between “how the game is played outside” and “what we do here”
+should stay close.</p>
+<h3 id="what-evolves-design-decisions">What Evolves — Design
+Decisions</h3>
+<p><strong>Course User Guides with Compound Ledgers.</strong> One per
+course. Each guide captures the TLS lever decisions (Space, Language,
+Activities, Assessment, Roles, Rituals) with the reasoning. The compound
+ledger records what the course learned each semester — prescriptive
+entries that accumulate into institutional design intelligence.</p>
+<h3 id="what-connects-the-pipeline">What Connects — The Pipeline</h3>
+<p><strong>Capability Handoff Contracts.</strong> Explicit agreements
+about what each course produces and what the next one assumes. The
+equivalent of API contracts between services.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Course</th>
+<th>Capability In</th>
+<th>Capability Out</th>
+<th>Compound Handoff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intro to Design</td>
+<td>Curiosity, willingness</td>
+<td>Observation, synthesis, navigating ambiguity, visual thinking</td>
+<td>Can observe, frame problems, prototype, work in teams</td>
+</tr>
+<tr>
+<td>Disco</td>
+<td>Observation + synthesis skills</td>
+<td>Self-awareness, ideation from personal values, venture instinct</td>
+<td>Knows who they are as a builder, what problems they care about</td>
+</tr>
+<tr>
+<td>DBS</td>
+<td>Self-awareness + venture instinct</td>
+<td>Shipping capability, evidence-based iteration, builder identity</td>
+<td>Can go from 0 → 1, ship to real users, make evidence-based
+decisions</td>
+</tr>
+</tbody>
+</table>
+<p>This table updates each semester based on what actually transferred
+and what didn’t.</p>
+<h3 id="what-signals-shared-language">What Signals — Shared
+Language</h3>
+<p><strong>Language Guide.</strong> Not just a list of preferred words,
+but the <em>reasons</em> behind each choice. “Builder” not “student”
+because identity shapes behavior. “Ship” not “submit” because shipping
+implies an audience and stakes. “Faculty” not “instructor” because
+instruction is only one part of what we do.</p>
+<p>Language choices are the most visible expression of institutional
+taste. They’re also the easiest to compound — every new language
+decision and its reasoning gets added to the guide.</p>
+<h3 id="what-the-system-learned-the-institutional-compound-ledger">What
+the System Learned — The Institutional Compound Ledger</h3>
+<p>The meta-document. Every semester, what did the system learn? Not
+what individual courses learned (that lives in course user guides), but
+what Lilie <em>as a system</em> discovered:</p>
+<ul>
+<li>Which capability handoffs worked and which didn’t</li>
+<li>Where the co-curricular ecosystem amplified the curriculum and where
+it was disconnected</li>
+<li>What patterns emerged across multiple courses</li>
+<li>What the portal network looks like and where it has gaps</li>
+</ul>
+<hr />
+<h2 id="part-8-provocations-and-open-questions">Part 8: Provocations and
+Open Questions</h2>
+<h3 id="the-5050-rule">The 50/50 Rule</h3>
+<p>What if Lilie structurally protected time for system improvement? Not
+“use your spare time to update course guides” but actual, scheduled,
+compensated time allocated to compound work — capturing lessons,
+updating guides, designing the connections between programs, verifying
+that encoded changes made a difference.</p>
+<p>What would Lilie’s version of the 50/50 rule look like? Maybe not
+50/50 — maybe 80/20 or 70/30 — but <em>something</em> other than 90/10
+with the 10 getting cut when the semester gets busy.</p>
+<h3 id="who-designs-the-portal-network">Who Designs the Portal
+Network?</h3>
+<p>Principle VII says courses are “portals to the larger Lilie
+community.” That’s compound thinking hiding in plain sight — it already
+frames individual courses as nodes in a network. But who designs the
+network? Who maps which portal connects to which? Who notices when a
+portal is missing or when two portals could compound each other?</p>
+<p>Faculty are just starting to design these connections. The question
+is whether that work becomes structural or stays occasional.</p>
+<h3 id="does-the-system-need-hesam-in-every-loop">Does the System Need
+Hesam in Every Loop?</h3>
+<p>If the system compounds enough, does it need me in the loop on every
+design decision? The question is: “Is the scaffolding pattern itself
+captured as a reusable design primitive I can deploy in Disco or
+DBS?”</p>
+<p>Some decisions require human judgment — reading the room, adapting in
+the moment, seeing a specific student. Others could be encoded: the
+order of activities, the language in a prompt, the assessment structure
+for a particular type of assignment.</p>
+<p>The compound question isn’t “can the system replace me?” It’s “what
+does the system need me for, and what should it handle so I can focus on
+what only I can do?”</p>
+<h3 id="student-reflections-as-institutional-input">Student Reflections
+as Institutional Input</h3>
+<p>Student reflections are underused as design intelligence. Currently
+they flow one direction: student → grade. The compound version:
+reflections are systematically mined for design lessons at the
+institutional level.</p>
+<p>When patterns emerge across multiple courses — students consistently
+say the same thing about navigating ambiguity, or about when they first
+felt like a builder — that’s not just assessment data. That’s compound
+input for the institutional system.</p>
+<h3 id="the-three-questions">The Three Questions</h3>
+<p>Klaassen asks three questions before accepting AI output: 1. What was
+the hardest decision you made here? 2. What alternatives did you reject,
+and why? 3. What are you least confident about?</p>
+<p>What if these became standard questions in Lilie’s course design
+process? Before a course design gets finalized for the semester, the
+designing faculty answers these three questions. The answers become
+permanent institutional knowledge about how design decisions get made —
+not just <em>what</em> was decided, but <em>why</em>, and what the
+alternatives were.</p>
+<p>Over time, this accumulates into a rich archive of design reasoning
+that any faculty member can reference. Not “here’s what to do” but
+“here’s how people at Lilie think about design decisions, and here’s
+what they’ve rejected and why.”</p>
+<hr />
+<h2 id="the-provocation">The Provocation</h2>
+<p>Every semester Lilie runs that doesn’t make the next semester’s
+design permanently better <em>at the institutional level</em> is a
+missed compounding opportunity. Individual courses may improve.
+Individual faculty may grow. But the system — the machine that produces
+learning experiences — stays roughly the same.</p>
+<p>The question isn’t “are we getting better?” It’s: <strong>“What does
+the system now know that it didn’t know before — and can anyone at Lilie
+access that knowledge?”</strong></p>
+</div>
+</body>
+</html>
