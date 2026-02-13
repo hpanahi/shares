@@ -20,13 +20,9 @@
   }
 
   .container {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 60px 24px 80px;
-  }
-
-  h1, h2, h3, h4 {
-    font-family: 'IBM Plex Mono', 'SF Mono', Menlo, monospace;
   }
 
   h1 {
@@ -40,12 +36,12 @@
 
   h2 {
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-style: normal;
-    margin-top: 2.4em;
+    margin-top: 3em;
     margin-bottom: 0.6em;
     line-height: 1.2;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #555;
   }
@@ -54,7 +50,7 @@
     font-weight: 500;
     font-size: 1.15em;
     font-style: normal;
-    margin-top: 2em;
+    margin-top: 2.2em;
     margin-bottom: 0.3em;
     line-height: 1.3;
   }
@@ -81,27 +77,41 @@
     border-bottom-color: #111;
   }
 
-  /* Subtle intro paragraph */
+  /* Intro paragraphs after h1 */
   h1 + p {
     font-weight: 300;
     font-size: 1.05em;
     color: #444;
-    max-width: 680px;
+    max-width: 720px;
   }
 
-  /* Horizontal rules: Tufte uses very thin, quiet separators */
+  h1 + p + p {
+    font-weight: 300;
+    font-size: 0.95em;
+    color: #555;
+    max-width: 720px;
+  }
+
+  h1 + p + p + p {
+    font-weight: 300;
+    font-size: 0.9em;
+    color: #666;
+    max-width: 720px;
+  }
+
+  /* Horizontal rules */
   hr {
     border: none;
     border-top: 1px solid #ccc;
     margin: 2.4em 0;
   }
 
-  /* Course subtitle line (the italic em after h3) */
+  /* Ability description (italic em after h3) */
   h3 + p > em:first-child {
-    font-size: 0.85em;
+    font-size: 0.88em;
     font-weight: 300;
-    color: #666;
-    letter-spacing: 0.02em;
+    color: #555;
+    letter-spacing: 0.01em;
   }
 
   /* Tables: Tufte-inspired — no vertical rules, minimal horizontal */
@@ -109,7 +119,7 @@
     border-collapse: collapse;
     width: 100%;
     margin: 1em 0 2em;
-    font-size: 0.85em;
+    font-size: 0.82em;
     line-height: 1.55;
   }
 
@@ -120,7 +130,7 @@
   table th {
     font-weight: 500;
     text-align: left;
-    padding: 8px 12px 8px 0;
+    padding: 8px 14px 8px 0;
     vertical-align: bottom;
     font-style: normal;
     font-size: 0.82em;
@@ -132,7 +142,7 @@
   }
 
   table td {
-    padding: 7px 12px 7px 0;
+    padding: 8px 14px 8px 0;
     vertical-align: top;
     border: none;
     border-bottom: 1px solid #e0ddd5;
@@ -142,43 +152,72 @@
     border-bottom: none;
   }
 
-  /* Alternate row: very subtle warmth */
+  /* Alternate row */
   table tbody tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.015);
   }
 
-  /* Three-column layout: give each column roughly equal weight */
+  /* Column widths for Introduced / Practiced / Deepened */
   table th:nth-child(1),
   table td:nth-child(1) {
-    width: 28%;
-    color: #555;
+    width: 30%;
+    color: #666;
   }
 
   table th:nth-child(2),
   table td:nth-child(2) {
-    width: 40%;
+    width: 38%;
+    color: #333;
   }
 
   table th:nth-child(3),
   table td:nth-child(3) {
     width: 32%;
-    font-style: italic;
+    color: #111;
+    font-weight: 400;
+  }
+
+  /* Course names in bold within table cells */
+  table td strong {
+    font-weight: 600;
+    font-size: 0.92em;
+    letter-spacing: 0.01em;
+  }
+
+  /* Belief lists */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5em;
+  }
+
+  li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.92em;
+    line-height: 1.55;
     color: #333;
   }
 
-  /* Uncertain markers — style the (?) as a quiet annotation */
-  strong {
-    font-weight: 600;
+  li:last-child {
+    border-bottom: none;
   }
 
-  /* The "How to Read" section */
+  /* Belief quotes in italic */
+  li strong {
+    font-weight: 500;
+    color: #888;
+    font-size: 0.9em;
+  }
+
+  /* "How to Read" and closing sections */
   h2:last-of-type ~ p {
-    max-width: 680px;
+    max-width: 720px;
   }
 
   /* Footer note */
   .container > p:last-child {
-    font-size: 0.85em;
+    font-size: 0.82em;
     color: #888;
     margin-top: 3em;
     font-style: italic;
@@ -186,18 +225,18 @@
 
   /* Responsive */
   @media (max-width: 700px) {
-    body { font-size: 16px; }
+    body { font-size: 14px; }
     .container { padding: 32px 16px 48px; }
-    h1 { font-size: 2em; }
-    table { font-size: 0.82em; display: block; overflow-x: auto; }
-    table th:nth-child(1), table td:nth-child(1) { min-width: 140px; }
+    h1 { font-size: 1.8em; }
+    table { font-size: 0.78em; display: block; overflow-x: auto; }
+    table th:nth-child(1), table td:nth-child(1) { min-width: 160px; }
     table th:nth-child(2), table td:nth-child(2) { min-width: 200px; }
     table th:nth-child(3), table td:nth-child(3) { min-width: 180px; }
   }
 
   /* Print styles */
   @media print {
-    body { background: white; font-size: 11pt; }
+    body { background: white; font-size: 10pt; }
     .container { max-width: none; padding: 0; }
     table { page-break-inside: avoid; }
     h2, h3 { page-break-after: avoid; }
@@ -207,16 +246,21 @@
 <body>
 <div class="container">
 <h1 id="lilie-course-capability-map">Lilie Course Capability Map</h1>
-<p>A draft mapping of what students can do coming in, what they can do
-after, and what they believe after each Lilie course. This is a
-conversation starter for Kyle, Nick, and the academic team — not a
-finished product. Items marked with <strong>(?)</strong> are best
-guesses that need verification.</p>
+<p>Eight abilities run through the Lilie curriculum. Rather than mapping
+what each course teaches in isolation, this document traces how each
+ability is introduced, practiced, and deepened across the full course
+sequence — and what students come to believe along the way.</p>
+<p>This is a conversation starter for Kyle, Nick, and the academic team
+— not a finished product. Items marked with <strong>(?)</strong> are
+best guesses that need verification.</p>
+<p><em>Structure inspired by the Stanford d.school's shift from teaching
+"the design process" to teaching transferable design abilities.</em></p>
 <hr />
-<h2 id="entry-level-courses">Entry-Level Courses</h2>
-<h3 id="intro-to-design-and-innovation-busi-220">Intro to Design and
-Innovation (BUSI 220)</h3>
-<p><em>Faculty: Hesam Panahi — 3 credits</em></p>
+<h2 id="the-abilities">The Abilities</h2>
+<h3 id="learn-from-others">Learn from Others</h3>
+<p><em>Empathize with unfamiliar people and contexts. Conduct
+interviews. Observe. Learn from founders, customers, stakeholders, and
+industry experts.</em></p>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -225,119 +269,42 @@ Innovation (BUSI 220)</h3>
 </colgroup>
 <thead>
 <tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
+<th>Introduced</th>
+<th>Practiced</th>
+<th>Deepened</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Solve well-defined problems with known answers</td>
-<td>Empathize with and learn from unfamiliar people and contexts</td>
-<td>Don’t be afraid to throw away what you built</td>
+<td><strong>Intro to Design (220)</strong> — First experience
+interviewing strangers and doing fieldwork; learn to empathize with
+people unlike themselves</td>
+<td><strong>DBS (365)</strong> — Test prototypes with real early users
+in the field; collect and analyze feedback data</td>
+<td><strong>NVC (469)</strong> — Customer development with real market
+stakeholders; coaching accountability</td>
 </tr>
 <tr>
-<td>Write papers and take exams</td>
-<td>Synthesize messy qualitative data into insights and
-opportunities</td>
-<td>Lower the barrier to experimentation and trying new things</td>
+<td><strong>Disco (221)</strong> — Conduct informational interviews with
+industry stakeholders to gather real data</td>
+<td><strong>New Enterprises (369)</strong> — Primary market research
+with real customers; understand user and customer needs</td>
+<td><strong>SVF (465)</strong> — Assess founding teams and evaluate
+ventures from the investor perspective</td>
 </tr>
 <tr>
-<td>Work in groups when assigned</td>
-<td>Rapidly generate and test ideas — written, drawn, or built</td>
-<td>Focus on process as much as product — it’s not just where you end
-up, but how you got there</td>
-</tr>
-<tr>
-<td>Follow instructions to complete assignments</td>
-<td>Build prototypes at the right level of fidelity for the audience and
-feedback desired</td>
-<td>Building and shipping is the only way to move from theory to
-practice</td>
-</tr>
-<tr>
-<td><strong>(?)</strong> Little to no experience interviewing strangers
-or doing fieldwork</td>
-<td>Communicate stories, ideas, and reflections to diverse
-audiences</td>
-<td><strong>(?)</strong> I can make things even if I’m not “a
-designer”</td>
-</tr>
-<tr>
-<td></td>
-<td>Navigate ambiguity — persist in discomfort of not knowing</td>
-<td><strong>(?)</strong> The people I’m designing for know more than I
-do about their own lives</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="new-enterprises-discovery-disco-busi-221engi-221">New
-Enterprises: Discovery / Disco (BUSI 221/ENGI 221)</h3>
-<p><em>Faculty: Hesam Panahi — 3 credits</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Have interests and passions but haven’t mapped them to
-opportunities</td>
-<td>Articulate their unique combination of skills, interests, and
-passion</td>
-<td>You can start something that marries your passions with your
-purpose</td>
-</tr>
-<tr>
-<td>Can write a resume but haven’t deconstructed what it reveals about
-them</td>
-<td>Identify needs and opportunities that match their background</td>
-<td>The entrepreneurial mindset can support you in paths outside of
-entrepreneurship</td>
-</tr>
-<tr>
-<td>May know what industry they want to work in but haven’t explored
-alternatives</td>
-<td>Evaluate multiple industries and map stakeholders and value creation
-processes</td>
-<td><strong>(?)</strong> There are more paths available to me than I
-thought</td>
-</tr>
-<tr>
-<td>Haven’t conducted informational interviews or industry research in
-the field</td>
-<td>Conduct interviews with industry stakeholders to gather real
-data</td>
-<td><strong>(?)</strong> I don’t have to have it all figured out right
-now — but I can take the next step</td>
-</tr>
-<tr>
-<td></td>
-<td>Produce a portfolio of opportunities to pursue based on field
-research</td>
-<td><strong>(?)</strong> Exploring broadly before committing is not
-wasted time — it’s strategic</td>
-</tr>
-<tr>
-<td></td>
-<td>Map stepping stones from where they are to where they want to
-go</td>
+<td><strong>Founder's Journey (360)</strong> — Ask thoughtful questions
+of founders about their journey; learn from lived experience</td>
+<td><strong>TPDD (222)</strong> — Customer interviews, empathy maps,
+user personas, journey maps</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="founders-journey-busi-360">Founder’s Journey (BUSI 360)</h3>
-<p><em>Faculty: Kyle Judah — 1 credit (moving to 1.5)</em></p>
+<h3 id="synthesize-and-frame">Synthesize and Frame</h3>
+<p><em>Make sense of messy information — qualitative and quantitative.
+Find insights, identify opportunities, build frameworks.</em></p>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -346,51 +313,42 @@ go</td>
 </colgroup>
 <thead>
 <tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
+<th>Introduced</th>
+<th>Practiced</th>
+<th>Deepened</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Curious about startups but haven’t heard directly from founders</td>
-<td>Ask thoughtful questions of founders about their journey</td>
-<td>The best way to be inspired is by hearing it from people who have
-walked that path</td>
+<td><strong>Intro to Design (220)</strong> — Synthesize messy
+qualitative data into insights and opportunities</td>
+<td><strong>New Enterprises (369)</strong> — Construct a value
+proposition from research; translate assumptions into testable
+hypotheses</td>
+<td><strong>Entrepreneurial Strategy (463)</strong> — Analyze case
+studies and develop integrated strategy recommendations</td>
 </tr>
 <tr>
-<td>May romanticize or oversimplify the startup path</td>
-<td>Evaluate ideas and opportunities through the lens of a founder’s
-experience</td>
-<td>If people can see it, they believe they can be it</td>
-</tr>
-<tr>
-<td>Haven’t thought critically about intangible founder qualities</td>
-<td>Reflect on their own entrepreneurial potential and readiness</td>
-<td>The entrepreneurial mindset can support you in paths outside of
-entrepreneurship</td>
-</tr>
-<tr>
-<td></td>
-<td>Distinguish between the reality of the founder’s journey and common
-myths</td>
-<td><strong>(?)</strong> Starting a company is hard, messy, and human —
-and that’s okay</td>
+<td><strong>Disco (221)</strong> — Evaluate multiple industries and map
+stakeholders and value creation processes</td>
+<td><strong>DBS (365)</strong> — Analyze field data to decide whether to
+persevere, pivot, or stop</td>
+<td><strong>SVF (465)</strong> — Construct investment thesis; write
+investment memo with market analysis, valuation, risks</td>
 </tr>
 <tr>
 <td></td>
-<td>Articulate what surprised them about the founder’s journey and how
-it changed their thinking</td>
-<td><strong>(?)</strong> I have talents relevant to entrepreneurship
-that I didn’t recognize before</td>
+<td><strong>TPDD (222)</strong> — Apply JTBD framework; prioritize
+features using effort vs. impact analysis</td>
+<td><strong>Financing (461)</strong> — Build data-driven TAM/SAM/SOM
+model</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="core-venture-development-courses">Core Venture Development
-Courses</h2>
-<h3 id="new-enterprises-busi-369">New Enterprises (BUSI 369)</h3>
-<p><em>Faculty: Sophie Randolph — 3 credits</em></p>
+<h3 id="experiment-and-validate">Experiment and Validate</h3>
+<p><em>Test assumptions quickly. Generate and iterate on ideas —
+written, drawn, or built. Let doing lead thinking.</em></p>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -399,61 +357,39 @@ Courses</h2>
 </colgroup>
 <thead>
 <tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
+<th>Introduced</th>
+<th>Practiced</th>
+<th>Deepened</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>May have a startup idea but no framework for testing it</td>
-<td>Evaluate whether a problem is worth solving as a new venture</td>
-<td>You can start a business while in college</td>
-</tr>
-<tr>
-<td>Haven’t done primary market research with real customers</td>
-<td>Understand customer and user needs through primary market research
-(interviews, fieldwork)</td>
-<td>The way to start a business is by having early contact with
-customers and users</td>
-</tr>
-<tr>
-<td>Can brainstorm ideas but don’t know how to validate them</td>
-<td>Construct a value proposition and define a solution that addresses a
-real problem</td>
-<td>Building and shipping is the only way to move from theory to
-practice</td>
+<td><strong>Intro to Design (220)</strong> — Rapidly generate and test
+ideas; build prototypes at the right fidelity level</td>
+<td><strong>New Enterprises (369)</strong> — Communicate and test value
+without building (pretotyping); systematically eliminate risk</td>
+<td><strong>NVC (469)</strong> — Go-to-market experiments; translate
+ideas into measurable traction</td>
 </tr>
 <tr>
 <td></td>
-<td>Communicate and test the value of a solution without building it
-(pretotyping)</td>
-<td>Lower the barrier to experimentation and trying new things</td>
+<td><strong>DBS (365)</strong> — Sprint-based experiments with real
+users; propose next iteration based on learnings</td>
+<td><strong>BME (223)</strong> — Formulate iterative financial models;
+track assumptions against reality</td>
 </tr>
 <tr>
 <td></td>
-<td>Translate assumptions into testable hypotheses</td>
-<td><strong>(?)</strong> Most startups fail not because the product was
-wrong, but because they didn’t talk to customers early enough</td>
-</tr>
-<tr>
-<td></td>
-<td>Systematically prioritize and eliminate risk through
-evidence-gathering</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Deliver an executive summary and final presentation for a venture
-concept</td>
+<td><strong>TPDD (222)</strong> — Build prototypes and run user
+tests</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="design-build-ship-dbs-busi-365">Design Build Ship / DBS (BUSI
-365)</h3>
-<p><em>Faculty: Hesam Panahi, Adam Wulf — 3 credits</em></p>
+<h3 id="build-and-ship">Build and Ship</h3>
+<p><em>Make real things and get them to real people. Move from theory to
+practice.</em></p>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -462,60 +398,131 @@ concept</td>
 </colgroup>
 <thead>
 <tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
+<th>Introduced</th>
+<th>Practiced</th>
+<th>Deepened</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Have taken Intro to Design or New Enterprises — understand
-design/startup frameworks</td>
-<td>Build and test low-fidelity prototypes with real early users in the
-field</td>
-<td>Building and shipping is the only way to move from theory to
-practice</td>
+<td><strong>Intro to Design (220)</strong> — Build prototypes;
+communicate ideas through artifacts</td>
+<td><strong>DBS (365)</strong> — Build and test low-fidelity prototypes
+with real users; demo working prototypes; use AI tools critically in the
+build process</td>
+<td><strong>NVC (469)</strong> — Self-directed startup execution;
+tangible market progress</td>
 </tr>
 <tr>
-<td>Can articulate an idea but haven’t shipped anything</td>
-<td>Analyze field data to decide whether to persevere, pivot, or stop an
-idea</td>
-<td>Focus on process as much as product — it’s not just where you end
-up, but how you got there</td>
+<td></td>
+<td><strong>New Enterprises (369)</strong> — Deliver executive summary
+and final presentation for a venture concept</td>
+<td></td>
 </tr>
 <tr>
-<td>Know how to do customer interviews but haven’t run sprint-based
+<td></td>
+<td><strong>TPDD (222)</strong> — Build a prototype and run user tests;
+write PRD and product roadmap</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="communicate-and-persuade">Communicate and Persuade</h3>
+<p><em>Tell stories. Pitch ideas. Write memos. Present to investors,
+customers, teammates, and strangers.</em></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Introduced</th>
+<th>Practiced</th>
+<th>Deepened</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Intro to Design (220)</strong> — Communicate stories, ideas,
+and reflections to diverse audiences</td>
+<td><strong>Communications (361)</strong> — Present in business
+contexts; network professionally; write emails; run meetings; manage
+conflicts</td>
+<td><strong>Financing (461)</strong> — Craft executive summary and pitch
+deck; tell a compelling founder story</td>
+</tr>
+<tr>
+<td><strong>Disco (221)</strong> — Articulate unique combination of
+skills, interests, and passion</td>
+<td><strong>DBS (365)</strong> — Demo working prototypes and articulate
+what was learned</td>
+<td><strong>Entrepreneurial Strategy (463)</strong> — Create personal
+pitch deck; present strategy recommendations</td>
+</tr>
+<tr>
+<td><strong>Founder's Journey (360)</strong> — Articulate what surprised
+them and how it changed their thinking</td>
+<td><strong>New Enterprises (369)</strong> — Deliver executive summary
+and final presentation</td>
+<td><strong>SVF (465)</strong> — Deliver formal investment
+recommendation to Investment Committee</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>BME (223)</strong> — Present findings to stakeholders
+(investors, cofounders, advisors)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="model-and-measure">Model and Measure</h3>
+<p><em>Create financial models. Define metrics. Use data to make
+decisions and track progress.</em></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Introduced</th>
+<th>Practiced</th>
+<th>Deepened</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DBS (365)</strong> — Select and implement a metric aligned
+to a value creation hypothesis</td>
+<td><strong>BME (223)</strong> — Build bottoms-up cash flow model;
+identify assumptions and risks; iterate with increasing resolution</td>
+<td><strong>Financing (461)</strong> — Build TAM/SAM/SOM model; evaluate
+term-sheet economics; develop fundraising strategy</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>New Enterprises (369)</strong> — Systematically prioritize
+and eliminate risk through evidence</td>
+<td><strong>SVF (465)</strong> — Apply VC valuation methods; perform
+structured due diligence</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>NVC (469)</strong> — Present progress with data from prior
 experiments</td>
-<td>Propose the next experiment or prototype iteration based on
-learnings</td>
-<td><strong>(?)</strong> Shipping something imperfect teaches you more
-than planning something perfect</td>
-</tr>
-<tr>
-<td></td>
-<td>Select and implement a metric aligned to a value creation
-hypothesis</td>
-<td><strong>(?)</strong> I can build and ship real things, not just
-assignments</td>
-</tr>
-<tr>
-<td></td>
-<td>Demo working prototypes and articulate what was learned</td>
-<td><strong>(?)</strong> Speed of learning matters more than speed of
-building</td>
-</tr>
-<tr>
-<td></td>
-<td>Use AI tools critically as part of the build process — questioning
-output, understanding code before shipping</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="new-venture-challenge-nvc-busi-469">New Venture Challenge / NVC
-(BUSI 469)</h3>
-<p><em>Faculty: Kyle Judah, Sophie Randolph — 3 credits</em></p>
+<h3 id="navigate-ambiguity">Navigate Ambiguity</h3>
+<p><em>Persist in the discomfort of not knowing. Find a way forward
+without clear instructions.</em></p>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -524,56 +531,41 @@ output, understanding code before shipping</td>
 </colgroup>
 <thead>
 <tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
+<th>Introduced</th>
+<th>Practiced</th>
+<th>Deepened</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Have an active venture they’re committed to launching into the
-market</td>
-<td>Set ambitious but realistic venture milestones and execute against
-them in 2-week sprints</td>
-<td>You can start a business while in college</td>
+<td><strong>Intro to Design (220)</strong> — First encounter with
+open-ended, ambiguous challenges; no single right answer</td>
+<td><strong>DBS (365)</strong> — Sprint-based work where the next step
+isn't given; must decide what to build, test, and learn</td>
+<td><strong>NVC (469)</strong> — Self-directed venture execution;
+structured whitespace with coaching, not answers</td>
 </tr>
 <tr>
-<td>Have taken prior Lilie courses — understand customer discovery and
-prototyping</td>
-<td>Self-direct startup execution (customer development, prototype
-testing, go-to-market experiments, fundraising prep) with coaching
-accountability</td>
-<td><strong>(?)</strong> The structured whitespace to work on my venture
-is what I needed to actually make progress</td>
-</tr>
-<tr>
-<td>Can articulate a value proposition</td>
-<td>Translate ideas into tangible market progress — measurable traction,
-not just plans</td>
-<td><strong>(?)</strong> Entrepreneurship is not just about the idea —
-it’s about consistent execution over time</td>
+<td><strong>Disco (221)</strong> — Explore industries without knowing
+where it leads; map stepping stones from uncertainty</td>
+<td><strong>New Enterprises (369)</strong> — Evaluate whether a problem
+is worth solving; translate ambiguity into testable hypotheses</td>
+<td><strong>Entrepreneurial Strategy (463)</strong> — Navigate founder
+dilemmas with no clear right answer; ethical tradeoffs</td>
 </tr>
 <tr>
 <td></td>
-<td>Reflect deeply on what was learned and produce a forward-looking
-roadmap for the venture beyond the course</td>
-<td><strong>(?)</strong> Grades don’t matter as much as what I actually
-built and learned</td>
-</tr>
-<tr>
-<td></td>
-<td>Present progress clearly with data from prior experiments and
-structured next steps</td>
+<td><strong>BME (223)</strong> — Interpret data and constraints in
+ambiguous circumstances; "all models are wrong, but some are
+useful"</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="specialized-functional-courses">Specialized / Functional
-Courses</h2>
-<h3 id="tech-product-design-and-development-tpdd-busi-222">Tech Product
-Design and Development / TPDD (BUSI 222)</h3>
-<p><em>Faculty: Adam Wulf, Diana Massaro — 3 credits</em></p>
+<h3 id="self-direct">Self-Direct</h3>
+<p><em>Own your path. Set goals. Make strategic choices about what to
+pursue and how.</em></p>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -582,464 +574,193 @@ Design and Development / TPDD (BUSI 222)</h3>
 </colgroup>
 <thead>
 <tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
+<th>Introduced</th>
+<th>Practiced</th>
+<th>Deepened</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Interested in tech products but don’t understand the PM role</td>
-<td>Apply Jobs-To-Be-Done framework to understand customer needs</td>
-<td>Building, launching, and managing technology products requires the
-intersectional expertise of technology, business, and design</td>
+<td><strong>Disco (221)</strong> — Map stepping stones from where they
+are to where they want to go; produce a portfolio of opportunities</td>
+<td><strong>DBS (365)</strong> — Propose next experiment based on
+learnings; decide persevere, pivot, or stop</td>
+<td><strong>NVC (469)</strong> — Set venture milestones and execute in
+2-week sprints; self-direct startup execution</td>
 </tr>
 <tr>
-<td>May have technical skills but haven’t connected them to product
-strategy</td>
-<td>Conduct customer interviews and create empathy maps, user personas,
-and journey maps</td>
-<td><strong>(?)</strong> Good products come from understanding people,
-not just technology</td>
-</tr>
-<tr>
-<td>Haven’t worked in cross-functional product teams</td>
-<td>Write a Product Requirements Document (PRD) and product roadmap</td>
-<td><strong>(?)</strong> The PM role is about connecting dots across
-design, engineering, and business</td>
+<td><strong>Founder's Journey (360)</strong> — Reflect on
+entrepreneurial potential and readiness</td>
+<td><strong>Entrepreneurial Strategy (463)</strong> — Make strategic
+choices: customer, capabilities, competition, team</td>
+<td><strong>SVF (465)</strong> — Source companies; construct investment
+thesis; make real investment decisions</td>
 </tr>
 <tr>
 <td></td>
-<td>Build a prototype and run user tests</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Prioritize features using effort vs. impact analysis and opportunity
-solution trees</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Use AI tools effectively in a product management context</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Manage stakeholders and communicate product decisions across
-functions (marketing, ops, sales, engineering)</td>
+<td><strong>Communications (361)</strong> — Use communication tools to
+facilitate internship, career exploration, or job search</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="business-modeling-for-entrepreneurs-busi-223">Business Modeling
-for Entrepreneurs (BUSI 223)</h3>
-<p><em>Faculty: Patrick Ray — 3 credits</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>May have a business idea but no financial model</td>
-<td>Translate a startup business plan into a bottoms-up quantitative
-model of cash flows</td>
-<td>Creating a financial model for a startup is not the same as the
-financial model for an existing business</td>
-</tr>
-<tr>
-<td>Think of financial modeling as a finance/accounting skill</td>
-<td>Identify and evaluate key assumptions and risks in a business
-model</td>
-<td>You don’t need to have a finance or business background to build a
-financial model</td>
-</tr>
-<tr>
-<td>Haven’t modeled assumptions or tracked them against reality</td>
-<td>Formulate iterative models with increasing resolution — starting
-rough, refining over time</td>
-<td>A financial model is a prototype — developing a model requires being
-generative, creative, and iterative</td>
-</tr>
-<tr>
-<td><strong>(?)</strong> Uncomfortable with ambiguity in quantitative
-work</td>
-<td>Use the model to track performance, identify errors in assumptions,
-and adjust based on real data</td>
-<td><strong>(?)</strong> Being messy is okay — “all models are wrong,
-but some are useful”</td>
-</tr>
-<tr>
-<td></td>
-<td>Identify appropriate inputs and outputs for a given type of business
-model</td>
-<td><strong>(?)</strong> A financial model is a decision-making tool,
-not a prediction machine</td>
-</tr>
-<tr>
-<td></td>
-<td>Present findings effectively to stakeholders (investors, cofounders,
-advisors)</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Interpret data and constraints in ambiguous circumstances</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h2 id="what-students-come-to-believe">What Students Come to
+Believe</h2>
+<p>The abilities above describe what students can <em>do</em>. Equally
+important is what they come to <em>believe</em> — the mindset shifts and
+identity changes that stay with them. These are drawn from the Lilie
+Beliefs document where possible, supplemented with reasonable inferences
+from syllabi. Items marked <strong>(?)</strong> are best guesses.</p>
+<h3 id="about-themselves">About Themselves</h3>
+<ul>
+<li><strong>(?)</strong> "I can make things even if I'm not 'a
+designer'" — Intro to Design (220)</li>
+<li><strong>(?)</strong> "I can build and ship real things, not just
+assignments" — DBS (365)</li>
+<li><strong>(?)</strong> "I have talents relevant to entrepreneurship
+that I didn't recognize before" — Founder's Journey (360)</li>
+<li><strong>(?)</strong> "There are more paths available to me than I
+thought" — Disco (221)</li>
+<li><strong>(?)</strong> "I don't have to have it all figured out right
+now — but I can take the next step" — Disco (221)</li>
+</ul>
+<h3 id="about-process">About Process</h3>
+<ul>
+<li>"Don't be afraid to throw away what you built" — Intro to Design
+(220)</li>
+<li>"Lower the barrier to experimentation and trying new things" — Intro
+to Design (220), New Enterprises (369)</li>
+<li>"Focus on process as much as product — it's not just where you end
+up, but how you got there" — Intro to Design (220), DBS (365)</li>
+<li>"Building and shipping is the only way to move from theory to
+practice" — Intro to Design (220), New Enterprises (369), DBS (365)</li>
+<li><strong>(?)</strong> "Shipping something imperfect teaches you more
+than planning something perfect" — DBS (365)</li>
+<li><strong>(?)</strong> "Speed of learning matters more than speed of
+building" — DBS (365)</li>
+</ul>
+<h3 id="about-entrepreneurship">About Entrepreneurship</h3>
+<ul>
+<li>"You can start a business while in college" — New Enterprises (369),
+NVC (469)</li>
+<li>"You can start something that marries your passions with your
+purpose" — Disco (221)</li>
+<li>"The entrepreneurial mindset can support you in paths outside of
+entrepreneurship" — Disco (221), Founder's Journey (360)</li>
+<li>"The way to start a business is by having early contact with
+customers and users" — New Enterprises (369)</li>
+<li><strong>(?)</strong> "Exploring broadly before committing is not
+wasted time — it's strategic" — Disco (221)</li>
+<li><strong>(?)</strong> "Entrepreneurship is not just about the idea —
+it's about consistent execution over time" — NVC (469)</li>
+<li><strong>(?)</strong> "Starting a company is hard, messy, and human —
+and that's okay" — Founder's Journey (360)</li>
+<li><strong>(?)</strong> "Grades don't matter as much as what I actually
+built and learned" — NVC (469)</li>
+<li><strong>(?)</strong> "The structured whitespace to work on my
+venture is what I needed to actually make progress" — NVC (469)</li>
+</ul>
+<h3 id="about-knowledge-and-expertise">About Knowledge and
+Expertise</h3>
+<ul>
+<li>"The best way to be inspired is by hearing it from people who have
+walked that path" — Founder's Journey (360)</li>
+<li>"If people can see it, they believe they can be it" — Founder's
+Journey (360)</li>
+<li><strong>(?)</strong> "The people I'm designing for know more than I
+do about their own lives" — Intro to Design (220)</li>
+<li><strong>(?)</strong> "Most startups fail not because the product was
+wrong, but because they didn't talk to customers early enough" — New
+Enterprises (369)</li>
+<li><strong>(?)</strong> "How you communicate your idea is as important
+as the idea itself" — Communications (361)</li>
+<li><strong>(?)</strong> "Communication is a skill you can practice and
+improve, not a talent you're born with" — Communications (361)</li>
+<li><strong>(?)</strong> "The ability to communicate clearly is a
+competitive advantage in any career path" — Communications (361)</li>
+</ul>
+<h3 id="about-models-and-strategy">About Models and Strategy</h3>
+<ul>
+<li>"Creating a financial model for a startup is not the same as the
+financial model for an existing business" — BME (223)</li>
+<li>"You don't need to have a finance or business background to build a
+financial model" — BME (223)</li>
+<li>"A financial model is a prototype — developing a model requires
+being generative, creative, and iterative" — BME (223)</li>
+<li><strong>(?)</strong> "Being messy is okay — 'all models are wrong,
+but some are useful'" — BME (223)</li>
+<li><strong>(?)</strong> "A financial model is a decision-making tool,
+not a prediction machine" — BME (223)</li>
+<li>"There are many different ways to finance many different types of
+businesses" — Financing (461)</li>
+<li><strong>(?)</strong> "Fundraising is as much art as science — too
+little runway and you stall, too much dilution and you lose control" —
+Financing (461)</li>
+<li><strong>(?)</strong> "The right financing strategy depends on the
+type of business you're building" — Financing (461)</li>
+<li><strong>(?)</strong> "Understanding the investor's perspective makes
+you a better founder" — Financing (461)</li>
+<li>"There are many paths through the maze of entrepreneurship and
+making choices have trade-offs" — Entrepreneurial Strategy (463)</li>
+<li><strong>(?)</strong> "To achieve competitive advantage,
+entrepreneurs must balance experimentation with strategic commitment" —
+Entrepreneurial Strategy (463)</li>
+<li><strong>(?)</strong> "The strategic choices you make early constrain
+— or enable — everything that comes after" — Entrepreneurial Strategy
+(463)</li>
+<li><strong>(?)</strong> "Strategy is about choosing what NOT to do, not
+just what to do" — Entrepreneurial Strategy (463)</li>
+</ul>
+<h3 id="about-products-and-technology">About Products and
+Technology</h3>
+<ul>
+<li>"Building, launching, and managing technology products requires the
+intersectional expertise of technology, business, and design" — TPDD
+(222)</li>
+<li><strong>(?)</strong> "Good products come from understanding people,
+not just technology" — TPDD (222)</li>
+<li><strong>(?)</strong> "The PM role is about connecting dots across
+design, engineering, and business" — TPDD (222)</li>
+</ul>
+<h3 id="about-investing">About Investing</h3>
+<ul>
+<li><strong>(?)</strong> "Evaluating startups from the investor side
+deepens your understanding of what makes a venture work" — SVF
+(465)</li>
+<li><strong>(?)</strong> "The skills of evaluating ventures are the same
+skills you need to build better ones" — SVF (465)</li>
+</ul>
 <hr />
-<h3 id="communications-for-entrepreneurs-busi-361">Communications for
-Entrepreneurs (BUSI 361)</h3>
-<p><em>Faculty: Diana Massaro — 1 credit (moving to 3)</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Can give a class presentation but haven’t pitched to
-stakeholders</td>
-<td>Present oneself confidently and appropriately in a business or
-organizational context</td>
-<td><strong>(?)</strong> How you communicate your idea is as important
-as the idea itself</td>
-</tr>
-<tr>
-<td>Haven’t tailored communication to different startup audiences</td>
-<td>Construct effective business messages in writing, presentations,
-digital platforms, and personal interactions</td>
-<td><strong>(?)</strong> Communication is a skill you can practice and
-improve, not a talent you’re born with</td>
-</tr>
-<tr>
-<td>May not have networking or professional communication
-experience</td>
-<td>Introduce themselves and network effectively in professional
-settings</td>
-<td><strong>(?)</strong> The ability to communicate clearly is a
-competitive advantage in any career path</td>
-</tr>
-<tr>
-<td></td>
-<td>Deliver a public presentation on a business topic</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Write professional emails and run effective meetings</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Manage interpersonal workplace conflicts</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Use communication tools developed in the course to facilitate an
-internship, career exploration, or job search</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="financing-the-startup-venture-busi-461">Financing the Startup
-Venture (BUSI 461)</h3>
-<p><em>Faculty: Zach Ellis, Sophie Randolph — 3 credits</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Know startups need funding but don’t understand the options</td>
-<td>Assess which funding sources best fit a business model —
-bootstrapping, grants, crowdfunding, angels, accelerators, or VC</td>
-<td>There are many different ways to finance many different types of
-businesses</td>
-</tr>
-<tr>
-<td>Haven’t interacted with the investment side of startups</td>
-<td>Build a data-driven TAM/SAM/SOM model that aligns with investor
-expectations</td>
-<td><strong>(?)</strong> Fundraising is as much art as science — too
-little runway and you stall, too much dilution and you lose control</td>
-</tr>
-<tr>
-<td>Haven’t seen a term sheet or understood deal structure</td>
-<td>Craft an executive summary and pitch deck that tells a compelling
-founder story</td>
-<td><strong>(?)</strong> The right financing strategy depends on the
-type of business you’re building</td>
-</tr>
-<tr>
-<td></td>
-<td>Read, evaluate, and negotiate term-sheet economics and control
-provisions</td>
-<td><strong>(?)</strong> Understanding the investor’s perspective makes
-you a better founder</td>
-</tr>
-<tr>
-<td></td>
-<td>Spot the dark side of VC — misaligned incentives, dilution traps,
-and founder pitfalls</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Develop a holistic fundraising strategy that balances capital needs,
-timing, and ownership goals</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="entrepreneurial-strategy-busi-463">Entrepreneurial Strategy
-(BUSI 463)</h3>
-<p><em>Faculty: Remington Tonar — 3 credits</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Have startup experience or coursework but haven’t studied strategic
-tradeoffs</td>
-<td>Choose and implement an entrepreneurial strategy (value chain,
-asset-based, disruptive, or architectural) for competitive
-advantage</td>
-<td>There are many paths through the maze of entrepreneurship and making
-choices have trade-offs</td>
-</tr>
-<tr>
-<td>Haven’t thought systematically about team, equity, and investor
-decisions</td>
-<td>Make key strategic choices: who is the customer, what capabilities
-to use, what kind of company to build, and with whom and how to
-compete</td>
-<td><strong>(?)</strong> To achieve competitive advantage, entrepreneurs
-must balance experimentation with strategic commitment</td>
-</tr>
-<tr>
-<td>Can identify a startup opportunity but can’t analyze it through a
-strategy lens</td>
-<td>Navigate founder dilemmas: whether to go solo or recruit cofounders,
-how to divide equity, how to manage investor relations, and when to step
-aside or sell</td>
-<td><strong>(?)</strong> The strategic choices you make early constrain
-— or enable — everything that comes after</td>
-</tr>
-<tr>
-<td></td>
-<td>Analyze real startup case studies (Gimlet, Lytro, Netflix, etc.) and
-develop integrated strategy recommendations</td>
-<td><strong>(?)</strong> Strategy is about choosing what NOT to do, not
-just what to do</td>
-</tr>
-<tr>
-<td></td>
-<td>Navigate ethical dilemmas unique to entrepreneurs (fundraising,
-product safety, growth vs. integrity)</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Create a personal pitch deck articulating their own entrepreneurial
-value</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="student-venture-fund-busi-465mgmt-740">Student Venture Fund
-(BUSI 465/MGMT 740)</h3>
-<p><em>Faculty: Deric Beatty — 3 credits</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Have taken prior business/entrepreneurship courses with foundational
-analytical and communication skills</td>
-<td>Source compelling early-stage companies and evaluate market
-opportunities</td>
-<td><strong>(?)</strong> Evaluating startups from the investor side
-deepens your understanding of what makes a venture work</td>
-</tr>
-<tr>
-<td>Haven’t evaluated ventures from the investor’s perspective</td>
-<td>Analyze competitive positioning and assess founding teams</td>
-<td><strong>(?)</strong> The skills of evaluating ventures are the same
-skills you need to build better ones</td>
-</tr>
-<tr>
-<td></td>
-<td>Construct an investment thesis and perform structured due
-diligence</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Apply valuation methods used in professional venture capital
-settings</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Write an investment memo and comprehensive final report with market
-analysis, valuation, risks, and recommendation</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Prepare and deliver a formal investment recommendation to an
-Investment Committee — mirroring the real expectations of institutional
-VC firms</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>Make real investment decisions with actual alumni-donated
-capital</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="courses-on-the-roadmap-not-yet-offered">Courses on the Roadmap
-(Not Yet Offered)</h2>
-<h3 id="innovation-for-social-impact-target-fall-2026">Innovation for
-Social Impact <em>(Target: Fall 2026)</em></h3>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>(?)</strong> Have interests in social impact but haven’t
-connected innovation tools to it</td>
-<td><strong>(?)</strong> Apply entrepreneurial and design methods to
-social challenges</td>
-<td><strong>(?)</strong> Innovation and social impact are not separate
-tracks — they reinforce each other</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>(?)</strong> Identify and engage stakeholders in complex
-social systems</td>
-<td><strong>(?)</strong> You can create meaningful change using the same
-tools you’d use to start a company</td>
-</tr>
-</tbody>
-</table>
-<h3 id="revenue-generation-for-entrepreneurs-target-spring-2027">Revenue
-Generation for Entrepreneurs <em>(Target: Spring 2027)</em></h3>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>What they can do coming in</th>
-<th>What they can do after</th>
-<th>What they believe after</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>(?)</strong> Have built a product but don’t know how to get
-it to customers</td>
-<td><strong>(?)</strong> Develop and execute a distribution, sales, or
-marketing strategy</td>
-<td><strong>(?)</strong> Building is only half the equation — getting it
-to people is the other half</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>(?)</strong> Generate early revenue or design a revenue
-model</td>
-<td><strong>(?)</strong> Revenue is a form of validation — it tells you
-something that free signups can’t</td>
-</tr>
-</tbody>
-</table>
+<h2 id="courses-on-the-roadmap">Courses on the Roadmap</h2>
+<p>Two planned courses will extend the ability set:</p>
+<p><strong>Innovation for Social Impact</strong> <em>(Target: Fall
+2026)</em> — <strong>(?)</strong> Expected to develop Learn from Others
+and Synthesize and Frame in the context of social systems, and to
+introduce the belief that innovation and social impact reinforce each
+other.</p>
+<p><strong>Revenue Generation for Entrepreneurs</strong> <em>(Target:
+Spring 2027)</em> — <strong>(?)</strong> Expected to develop Build and
+Ship and Model and Measure toward distribution, sales, and revenue, and
+to introduce the belief that revenue is a form of validation that tells
+you something free signups can't.</p>
 <hr />
 <h2 id="how-to-read-this-map">How to Read This Map</h2>
-<p><strong>“What they can do coming in”</strong> = prerequisite
-capabilities, what students typically arrive with. This helps understand
-who the course is designed for.</p>
-<p><strong>“What they can do after”</strong> = demonstrable skills and
-actions. These are things a student could show someone, not just talk
-about.</p>
-<p><strong>“What they believe after”</strong> = mindset shifts, identity
-changes, internalized beliefs. These are drawn from the Lilie Beliefs
-document where possible, supplemented with reasonable inferences from
-syllabi.</p>
+<p><strong>The Abilities</strong> are organized from most broadly shared
+across the curriculum to most specialized. "Introduced" means students
+encounter the ability for the first time. "Practiced" means they apply
+it with increasing independence. "Deepened" means it becomes
+professional-grade or self-directed.</p>
+<p><strong>The Beliefs</strong> are grouped by theme rather than by
+course, to show the cumulative worldview the Lilie curriculum builds.
+Course names in parentheses indicate where each belief is most strongly
+developed.</p>
 <p>Items marked <strong>(?)</strong> are best guesses to be corrected
 and filled in.</p>
 <hr />
 <p><em>Generated from full syllabi (Spring 2026 / Fall 2025), the Lilie
-Beliefs document, and the Lilie Academic Roadmap.</em></p>
+Beliefs document, and the Lilie Academic Roadmap. Structure inspired by
+the Stanford d.school's design abilities framework.</em></p>
 </div>
 </body>
 </html>
