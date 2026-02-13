@@ -34,6 +34,14 @@
     letter-spacing: -0.02em;
   }
 
+  .intro {
+    font-weight: 300;
+    font-size: 1.05em;
+    color: #444;
+    max-width: 720px;
+    margin-bottom: 1.2em;
+  }
+
   h2 {
     font-weight: 300;
     font-size: 1.4em;
@@ -46,715 +54,584 @@
     color: #555;
   }
 
-  h3 {
-    font-weight: 500;
-    font-size: 1.15em;
-    font-style: normal;
-    margin-top: 2.2em;
-    margin-bottom: 0.3em;
-    line-height: 1.3;
-  }
-
-  h4 {
-    font-weight: 600;
-    font-size: 1em;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-  }
-
-  p {
-    margin-top: 0;
-    margin-bottom: 1.2em;
-  }
-
-  a {
-    color: #111;
-    text-decoration: none;
-    border-bottom: 1px solid #ccc;
-  }
-
-  a:hover {
-    border-bottom-color: #111;
-  }
-
-  /* Intro paragraphs after h1 */
-  h1 + p {
-    font-weight: 300;
-    font-size: 1.05em;
-    color: #444;
-    max-width: 720px;
-  }
-
-  h1 + p + p {
-    font-weight: 300;
-    font-size: 0.95em;
-    color: #555;
-    max-width: 720px;
-  }
-
-  h1 + p + p + p {
-    font-weight: 300;
-    font-size: 0.9em;
-    color: #666;
-    max-width: 720px;
-  }
-
-  /* Horizontal rules */
   hr {
     border: none;
     border-top: 1px solid #ccc;
     margin: 2.4em 0;
   }
 
-  /* Ability description (italic em after h3) */
-  h3 + p > em:first-child {
-    font-size: 0.88em;
-    font-weight: 300;
-    color: #555;
-    letter-spacing: 0.01em;
+  /* ── SVG pathway ── */
+  .pathway-svg {
+    width: 100%;
+    max-width: 920px;
+    height: auto;
+    margin: 1.5em 0 0.5em;
   }
 
-  /* Tables: Tufte-inspired — no vertical rules, minimal horizontal */
-  table {
+  /* ── Ability matrix ── */
+  .matrix-wrap {
+    overflow-x: auto;
+    margin: 1em 0 2.5em;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .matrix {
     border-collapse: collapse;
-    width: 100%;
-    margin: 1em 0 2em;
     font-size: 0.82em;
     line-height: 1.55;
+    min-width: 660px;
   }
 
-  table thead {
+  .matrix thead {
     border-bottom: 2px solid #111;
   }
 
-  table th {
+  .matrix th {
     font-weight: 500;
-    text-align: left;
-    padding: 8px 14px 8px 0;
+    padding: 0 8px 8px;
     vertical-align: bottom;
-    font-style: normal;
-    font-size: 0.82em;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #333;
+    text-align: center;
     border: none;
     background: none;
   }
 
-  table td {
-    padding: 8px 14px 8px 0;
-    vertical-align: top;
+  .matrix th:first-child {
+    text-align: left;
+    padding-left: 0;
+    font-size: 0.82em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #333;
+  }
+
+  .matrix th:not(:first-child) {
+    height: 120px;
+    min-width: 56px;
+    position: relative;
+  }
+
+  .rotate {
+    display: inline-block;
+    transform: rotate(-55deg);
+    transform-origin: left bottom;
+    white-space: nowrap;
+    font-size: 0.82em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #333;
+    font-weight: 500;
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+  }
+
+  .matrix td {
+    padding: 8px 8px;
+    text-align: center;
+    vertical-align: middle;
     border: none;
+    border-bottom: 1px solid #e8e5dd;
+  }
+
+  .matrix td:first-child {
+    text-align: left;
+    font-weight: 400;
+    white-space: nowrap;
+    color: #333;
+    padding-left: 0;
+  }
+
+  .matrix tr:last-child td {
+    border-bottom: none;
+  }
+
+  .matrix tr.tier-sep td {
+    border-bottom: 2px solid #d0cdc5;
+    padding: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+  }
+
+  /* Dot indicators */
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .dot.d-intro {
+    border: 1.5px solid #999;
+    background: transparent;
+  }
+
+  .dot.d-prac {
+    border: 1.5px solid #777;
+    background: #aaa;
+  }
+
+  .dot.d-deep {
+    border: 1.5px solid #222;
+    background: #333;
+  }
+
+  /* ── Course cards ── */
+  .tier-label {
+    font-weight: 300;
+    font-size: 1.1em;
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  .course-card {
+    padding: 1.2em 0;
     border-bottom: 1px solid #e0ddd5;
   }
 
-  table tr:last-child td {
+  .course-card:last-child {
     border-bottom: none;
   }
 
-  /* Alternate row */
-  table tbody tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.015);
-  }
-
-  /* Column widths for Introduced / Practiced / Deepened */
-  table th:nth-child(1),
-  table td:nth-child(1) {
-    width: 30%;
-    color: #666;
-  }
-
-  table th:nth-child(2),
-  table td:nth-child(2) {
-    width: 38%;
-    color: #333;
-  }
-
-  table th:nth-child(3),
-  table td:nth-child(3) {
-    width: 32%;
-    color: #111;
-    font-weight: 400;
-  }
-
-  /* Course names in bold within table cells */
-  table td strong {
+  .course-name {
     font-weight: 600;
-    font-size: 0.92em;
-    letter-spacing: 0.01em;
+    font-size: 1em;
+    margin: 0;
   }
 
-  /* Belief lists */
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5em;
+  .course-meta {
+    font-weight: 300;
+    font-size: 0.85em;
+    color: #666;
+    margin: 0.15em 0 0.6em;
   }
 
-  li {
-    padding: 6px 0;
-    border-bottom: 1px solid #eee;
+  .course-desc {
     font-size: 0.92em;
-    line-height: 1.55;
+    line-height: 1.6;
     color: #333;
-  }
-
-  li:last-child {
-    border-bottom: none;
-  }
-
-  /* Belief quotes in italic */
-  li strong {
-    font-weight: 500;
-    color: #888;
-    font-size: 0.9em;
-  }
-
-  /* "How to Read" and closing sections */
-  h2:last-of-type ~ p {
+    margin: 0 0 0.5em;
     max-width: 720px;
   }
 
-  /* Footer note */
-  .container > p:last-child {
+  .course-belief {
+    font-style: italic;
+    font-size: 0.88em;
+    color: #555;
+    margin: 0;
+  }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2em 0 0.5em;
+    font-size: 0.82em;
+    color: #666;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ── Footer ── */
+  .footer {
     font-size: 0.82em;
     color: #888;
     margin-top: 3em;
     font-style: italic;
   }
 
-  /* Responsive */
+  /* ── Responsive ── */
   @media (max-width: 700px) {
     body { font-size: 14px; }
     .container { padding: 32px 16px 48px; }
     h1 { font-size: 1.8em; }
-    table { font-size: 0.78em; display: block; overflow-x: auto; }
-    table th:nth-child(1), table td:nth-child(1) { min-width: 160px; }
-    table th:nth-child(2), table td:nth-child(2) { min-width: 200px; }
-    table th:nth-child(3), table td:nth-child(3) { min-width: 180px; }
+    .matrix { font-size: 0.75em; }
+    .matrix th:not(:first-child) { height: 100px; min-width: 48px; }
+    .rotate { font-size: 0.78em; }
   }
 
-  /* Print styles */
+  /* ── Print ── */
   @media print {
     body { background: white; font-size: 10pt; }
     .container { max-width: none; padding: 0; }
-    table { page-break-inside: avoid; }
-    h2, h3 { page-break-after: avoid; }
+    .matrix-wrap { overflow: visible; }
+    .pathway-svg { max-width: 100%; }
   }
 </style>
 </head>
 <body>
 <div class="container">
-<h1 id="lilie-course-capability-map">Lilie Course Capability Map</h1>
-<p>Eight abilities run through the Lilie curriculum. Rather than mapping
-what each course teaches in isolation, this document traces how each
-ability is introduced, practiced, and deepened across the full course
-sequence — and what students come to believe along the way.</p>
-<p>This is a conversation starter for Kyle, Nick, and the academic team
-— not a finished product. Items marked with <strong>(?)</strong> are
-best guesses that need verification.</p>
-<p><em>Structure inspired by the Stanford d.school's shift from teaching
-"the design process" to teaching transferable design abilities.</em></p>
-<hr />
-<h2 id="the-abilities">The Abilities</h2>
-<h3 id="learn-from-others">Learn from Others</h3>
-<p><em>Empathize with unfamiliar people and contexts. Conduct
-interviews. Observe. Learn from founders, customers, stakeholders, and
-industry experts.</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
+
+<h1>Lilie Course Capability Map</h1>
+<p class="intro">Twelve courses build eight abilities — from empathy and experimentation to financial modeling and strategic thinking. Use this map to see how courses connect, which abilities each one develops, and where to start based on where you are.</p>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- Course Pathway Diagram                       -->
+<!-- ════════════════════════════════════════════ -->
+<h2>Course Pathways</h2>
+
+<svg class="pathway-svg" viewBox="0 0 920 340" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background bands -->
+  <rect x="0" y="0" width="920" height="106" fill="#f9f8f4" rx="3"/>
+  <rect x="0" y="112" width="920" height="106" fill="#f4f3ef" rx="3"/>
+  <rect x="0" y="224" width="920" height="116" fill="#f9f8f4" rx="3"/>
+
+  <!-- Tier labels -->
+  <text x="16" y="58" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="300" fill="#999" letter-spacing="0.12em">START HERE</text>
+  <text x="16" y="170" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="300" fill="#999" letter-spacing="0.12em">GO DEEPER</text>
+  <text x="16" y="284" font-family="'IBM Plex Mono', monospace" font-size="9.5" font-weight="300" fill="#999" letter-spacing="0.12em">SPECIALIZE</text>
+
+  <!-- Connection lines (drawn first, behind nodes) -->
+  <!-- 220 → 369 (vertical) -->
+  <line x1="260" y1="48" x2="260" y2="152" stroke="#ccc" stroke-width="1"/>
+  <!-- 220 → 365 (diagonal) -->
+  <line x1="260" y1="48" x2="500" y2="152" stroke="#ccc" stroke-width="1"/>
+  <!-- 369 → 365 → 469 (horizontal through Go Deeper) -->
+  <line x1="264" y1="162" x2="736" y2="162" stroke="#ccc" stroke-width="1"/>
+
+  <!-- ─── Start Here tier ─── -->
+  <g>
+    <circle cx="260" cy="42" r="4" fill="#555"/>
+    <text x="260" y="62" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="500" fill="#222">Intro to Design</text>
+    <text x="260" y="76" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="300" fill="#999">BUSI 220 · 3 cr</text>
+  </g>
+  <g>
+    <circle cx="500" cy="42" r="4" fill="#555"/>
+    <text x="500" y="62" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="500" fill="#222">Disco</text>
+    <text x="500" y="76" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="300" fill="#999">BUSI 221 · 3 cr</text>
+  </g>
+  <g>
+    <circle cx="740" cy="42" r="4" fill="#555"/>
+    <text x="740" y="62" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="500" fill="#222">Founder's Journey</text>
+    <text x="740" y="76" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="300" fill="#999">BUSI 360 · 1 cr</text>
+  </g>
+
+  <!-- ─── Go Deeper tier ─── -->
+  <g>
+    <circle cx="260" cy="162" r="4" fill="#555"/>
+    <text x="260" y="182" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="500" fill="#222">New Enterprises</text>
+    <text x="260" y="196" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="300" fill="#999">BUSI 369 · 3 cr</text>
+  </g>
+  <g>
+    <circle cx="500" cy="162" r="4" fill="#555"/>
+    <text x="500" y="182" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="500" fill="#222">DBS</text>
+    <text x="500" y="196" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="300" fill="#999">BUSI 365 · 3 cr</text>
+  </g>
+  <g>
+    <circle cx="740" cy="162" r="4" fill="#555"/>
+    <text x="740" y="182" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="11" font-weight="500" fill="#222">NVC</text>
+    <text x="740" y="196" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="300" fill="#999">BUSI 469 · 3 cr</text>
+  </g>
+
+  <!-- ─── Specialize tier ─── -->
+  <g>
+    <circle cx="175" cy="270" r="4" fill="#555"/>
+    <text x="175" y="290" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="500" fill="#222">TPDD</text>
+    <text x="175" y="302" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" font-weight="300" fill="#999">BUSI 222</text>
+  </g>
+  <g>
+    <circle cx="305" cy="270" r="4" fill="#555"/>
+    <text x="305" y="290" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="500" fill="#222">BME</text>
+    <text x="305" y="302" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" font-weight="300" fill="#999">BUSI 223</text>
+  </g>
+  <g>
+    <circle cx="435" cy="270" r="4" fill="#555"/>
+    <text x="435" y="290" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="500" fill="#222">Communications</text>
+    <text x="435" y="302" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" font-weight="300" fill="#999">BUSI 361</text>
+  </g>
+  <g>
+    <circle cx="565" cy="270" r="4" fill="#555"/>
+    <text x="565" y="290" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="500" fill="#222">Financing</text>
+    <text x="565" y="302" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" font-weight="300" fill="#999">BUSI 461</text>
+  </g>
+  <g>
+    <circle cx="695" cy="270" r="4" fill="#555"/>
+    <text x="695" y="290" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="500" fill="#222">Strategy</text>
+    <text x="695" y="302" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" font-weight="300" fill="#999">BUSI 463</text>
+  </g>
+  <g>
+    <circle cx="825" cy="270" r="4" fill="#555"/>
+    <text x="825" y="290" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="500" fill="#222">SVF</text>
+    <text x="825" y="302" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8.5" font-weight="300" fill="#999">BUSI 465</text>
+  </g>
+</svg>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- Ability Development Matrix                    -->
+<!-- ════════════════════════════════════════════ -->
+<h2>Ability Development Matrix</h2>
+
+<div class="matrix-wrap">
+<table class="matrix">
 <thead>
 <tr>
-<th>Introduced</th>
-<th>Practiced</th>
-<th>Deepened</th>
+  <th>Course</th>
+  <th><span class="rotate">Learn</span></th>
+  <th><span class="rotate">Synthesize</span></th>
+  <th><span class="rotate">Experiment</span></th>
+  <th><span class="rotate">Build</span></th>
+  <th><span class="rotate">Communicate</span></th>
+  <th><span class="rotate">Measure</span></th>
+  <th><span class="rotate">Ambiguity</span></th>
+  <th><span class="rotate">Self-Direct</span></th>
 </tr>
 </thead>
 <tbody>
+<!-- Start Here -->
 <tr>
-<td><strong>Intro to Design (220)</strong> — First experience
-interviewing strangers and doing fieldwork; learn to empathize with
-people unlike themselves</td>
-<td><strong>DBS (365)</strong> — Test prototypes with real early users
-in the field; collect and analyze feedback data</td>
-<td><strong>NVC (469)</strong> — Customer development with real market
-stakeholders; coaching accountability</td>
+  <td>220 Intro to Design</td>
+  <td><span class="dot d-intro"></span></td>
+  <td><span class="dot d-intro"></span></td>
+  <td><span class="dot d-intro"></span></td>
+  <td><span class="dot d-intro"></span></td>
+  <td><span class="dot d-intro"></span></td>
+  <td></td>
+  <td><span class="dot d-intro"></span></td>
+  <td></td>
 </tr>
 <tr>
-<td><strong>Disco (221)</strong> — Conduct informational interviews with
-industry stakeholders to gather real data</td>
-<td><strong>New Enterprises (369)</strong> — Primary market research
-with real customers; understand user and customer needs</td>
-<td><strong>SVF (465)</strong> — Assess founding teams and evaluate
-ventures from the investor perspective</td>
+  <td>221 Disco</td>
+  <td><span class="dot d-intro"></span></td>
+  <td><span class="dot d-intro"></span></td>
+  <td></td>
+  <td></td>
+  <td><span class="dot d-intro"></span></td>
+  <td></td>
+  <td><span class="dot d-intro"></span></td>
+  <td><span class="dot d-intro"></span></td>
 </tr>
 <tr>
-<td><strong>Founder's Journey (360)</strong> — Ask thoughtful questions
-of founders about their journey; learn from lived experience</td>
-<td><strong>TPDD (222)</strong> — Customer interviews, empathy maps,
-user personas, journey maps</td>
-<td></td>
+  <td>360 Founder's Journey</td>
+  <td><span class="dot d-intro"></span></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td><span class="dot d-intro"></span></td>
+  <td></td>
+  <td></td>
+  <td><span class="dot d-intro"></span></td>
 </tr>
-</tbody>
-</table>
-<hr />
-<h3 id="synthesize-and-frame">Synthesize and Frame</h3>
-<p><em>Make sense of messy information — qualitative and quantitative.
-Find insights, identify opportunities, build frameworks.</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
+<tr class="tier-sep"><td colspan="9"></td></tr>
+<!-- Go Deeper -->
 <tr>
-<th>Introduced</th>
-<th>Practiced</th>
-<th>Deepened</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Intro to Design (220)</strong> — Synthesize messy
-qualitative data into insights and opportunities</td>
-<td><strong>New Enterprises (369)</strong> — Construct a value
-proposition from research; translate assumptions into testable
-hypotheses</td>
-<td><strong>Entrepreneurial Strategy (463)</strong> — Analyze case
-studies and develop integrated strategy recommendations</td>
+  <td>369 New Enterprises</td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td></td>
 </tr>
 <tr>
-<td><strong>Disco (221)</strong> — Evaluate multiple industries and map
-stakeholders and value creation processes</td>
-<td><strong>DBS (365)</strong> — Analyze field data to decide whether to
-persevere, pivot, or stop</td>
-<td><strong>SVF (465)</strong> — Construct investment thesis; write
-investment memo with market analysis, valuation, risks</td>
+  <td>365 DBS</td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-intro"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>TPDD (222)</strong> — Apply JTBD framework; prioritize
-features using effort vs. impact analysis</td>
-<td><strong>Financing (461)</strong> — Build data-driven TAM/SAM/SOM
-model</td>
+  <td>469 NVC</td>
+  <td><span class="dot d-deep"></span></td>
+  <td></td>
+  <td><span class="dot d-deep"></span></td>
+  <td><span class="dot d-deep"></span></td>
+  <td></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-deep"></span></td>
+  <td><span class="dot d-deep"></span></td>
 </tr>
-</tbody>
-</table>
-<hr />
-<h3 id="experiment-and-validate">Experiment and Validate</h3>
-<p><em>Test assumptions quickly. Generate and iterate on ideas —
-written, drawn, or built. Let doing lead thinking.</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
+<tr class="tier-sep"><td colspan="9"></td></tr>
+<!-- Specialize -->
 <tr>
-<th>Introduced</th>
-<th>Practiced</th>
-<th>Deepened</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Intro to Design (220)</strong> — Rapidly generate and test
-ideas; build prototypes at the right fidelity level</td>
-<td><strong>New Enterprises (369)</strong> — Communicate and test value
-without building (pretotyping); systematically eliminate risk</td>
-<td><strong>NVC (469)</strong> — Go-to-market experiments; translate
-ideas into measurable traction</td>
+  <td>222 TPDD</td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>DBS (365)</strong> — Sprint-based experiments with real
-users; propose next iteration based on learnings</td>
-<td><strong>BME (223)</strong> — Formulate iterative financial models;
-track assumptions against reality</td>
+  <td>223 BME</td>
+  <td></td>
+  <td></td>
+  <td><span class="dot d-prac"></span></td>
+  <td></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td><span class="dot d-prac"></span></td>
+  <td></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>TPDD (222)</strong> — Build prototypes and run user
-tests</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="build-and-ship">Build and Ship</h3>
-<p><em>Make real things and get them to real people. Move from theory to
-practice.</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Introduced</th>
-<th>Practiced</th>
-<th>Deepened</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Intro to Design (220)</strong> — Build prototypes;
-communicate ideas through artifacts</td>
-<td><strong>DBS (365)</strong> — Build and test low-fidelity prototypes
-with real users; demo working prototypes; use AI tools critically in the
-build process</td>
-<td><strong>NVC (469)</strong> — Self-directed startup execution;
-tangible market progress</td>
+  <td>361 Communications</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td><span class="dot d-prac"></span></td>
+  <td></td>
+  <td></td>
+  <td><span class="dot d-prac"></span></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>New Enterprises (369)</strong> — Deliver executive summary
-and final presentation for a venture concept</td>
-<td></td>
+  <td>461 Financing</td>
+  <td></td>
+  <td><span class="dot d-deep"></span></td>
+  <td></td>
+  <td></td>
+  <td><span class="dot d-deep"></span></td>
+  <td><span class="dot d-deep"></span></td>
+  <td></td>
+  <td></td>
 </tr>
 <tr>
-<td></td>
-<td><strong>TPDD (222)</strong> — Build a prototype and run user tests;
-write PRD and product roadmap</td>
-<td></td>
+  <td>463 Strategy</td>
+  <td></td>
+  <td><span class="dot d-deep"></span></td>
+  <td></td>
+  <td></td>
+  <td><span class="dot d-deep"></span></td>
+  <td></td>
+  <td><span class="dot d-deep"></span></td>
+  <td><span class="dot d-prac"></span></td>
+</tr>
+<tr>
+  <td>465 SVF</td>
+  <td><span class="dot d-deep"></span></td>
+  <td><span class="dot d-deep"></span></td>
+  <td></td>
+  <td></td>
+  <td><span class="dot d-deep"></span></td>
+  <td><span class="dot d-deep"></span></td>
+  <td></td>
+  <td><span class="dot d-deep"></span></td>
 </tr>
 </tbody>
 </table>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><span class="dot d-intro"></span> Introduced</div>
+  <div class="legend-item"><span class="dot d-prac"></span> Practiced</div>
+  <div class="legend-item"><span class="dot d-deep"></span> Deepened</div>
+</div>
+
+<!-- ════════════════════════════════════════════ -->
+<!-- Course Cards                                  -->
+<!-- ════════════════════════════════════════════ -->
+<h2>Course Descriptions</h2>
+
+<h3 class="tier-label">Start Here</h3>
+
+<div class="course-card">
+  <p class="course-name">Intro to Design and Innovation</p>
+  <p class="course-meta">BUSI 220 · 3 cr · Hesam Panahi</p>
+  <p class="course-desc">You'll learn to empathize with people unlike yourself, synthesize messy qualitative data into insights, and prototype solutions through hands-on fieldwork and design challenges. This is where you discover that anyone can be a designer.</p>
+  <p class="course-belief">"Don't be afraid to throw away what you built."</p>
+</div>
+
+<div class="course-card">
+  <p class="course-name">New Enterprises: Discovery (Disco)</p>
+  <p class="course-meta">BUSI 221 · 3 cr · Hesam Panahi</p>
+  <p class="course-desc">You'll explore industries that fascinate you, conduct informational interviews with real stakeholders, and map stepping stones from where you are to where you want to go. You'll leave with a portfolio of opportunities and a clearer sense of your path.</p>
+  <p class="course-belief">"There are more paths available to me than I thought."</p>
+</div>
+
+<div class="course-card">
+  <p class="course-name">The Founder's Journey</p>
+  <p class="course-meta">BUSI 360 · 1 cr</p>
+  <p class="course-desc">You'll hear directly from founders about the real, messy, human side of building companies — then reflect on what surprised you and what it means for your own entrepreneurial potential.</p>
+  <p class="course-belief">"If people can see it, they believe they can be it."</p>
+</div>
+
+<h3 class="tier-label">Go Deeper</h3>
+
+<div class="course-card">
+  <p class="course-name">New Enterprises</p>
+  <p class="course-meta">BUSI 369 · 3 cr</p>
+  <p class="course-desc">You'll take a real problem and build a venture concept around it — conducting primary market research, testing your value proposition with real customers, and learning to systematically eliminate risk before you build.</p>
+  <p class="course-belief">"The way to start a business is by having early contact with customers and users."</p>
+</div>
+
+<div class="course-card">
+  <p class="course-name">Design Build Ship (DBS)</p>
+  <p class="course-meta">BUSI 365 · 3 cr · Hesam Panahi</p>
+  <p class="course-desc">You'll work in sprints to build and test prototypes with real users, analyze what you learn, and decide whether to persevere, pivot, or stop. You'll ship something real — not just a class project.</p>
+  <p class="course-belief">"Shipping something imperfect teaches you more than planning something perfect."</p>
+</div>
+
+<div class="course-card">
+  <p class="course-name">New Venture Competition (NVC)</p>
+  <p class="course-meta">BUSI 469 · 3 cr</p>
+  <p class="course-desc">You'll run your own startup with structured coaching — setting milestones, running go-to-market experiments, and making tangible market progress. This is where ideas become real companies.</p>
+  <p class="course-belief">"You can start a business while in college."</p>
+</div>
+
+<h3 class="tier-label">Specialize</h3>
+
+<div class="course-card">
+  <p class="course-name">Tech Product Design &amp; Development (TPDD)</p>
+  <p class="course-meta">BUSI 222 · 3 cr</p>
+  <p class="course-desc">You'll learn to think like a product manager — conducting customer interviews, building empathy maps, writing PRDs, and shipping prototypes at the intersection of technology, business, and design.</p>
+  <p class="course-belief">"Good products come from understanding people, not just technology."</p>
+</div>
+
+<div class="course-card">
+  <p class="course-name">Business Model Economics (BME)</p>
+  <p class="course-meta">BUSI 223 · 3 cr</p>
+  <p class="course-desc">You'll build financial models for startups from scratch — identifying assumptions, tracking them against reality, and iterating with increasing resolution. No finance background needed.</p>
+  <p class="course-belief">"A financial model is a prototype — it requires being generative, creative, and iterative."</p>
+</div>
+
+<div class="course-card">
+  <p class="course-name">Entrepreneurial Communications</p>
+  <p class="course-meta">BUSI 361 · 3 cr</p>
+  <p class="course-desc">You'll practice presenting in business contexts, networking professionally, writing effective emails, running meetings, and managing conflicts — the everyday skills that make everything else work.</p>
+  <p class="course-belief">"Communication is a skill you can practice and improve, not a talent you're born with."</p>
+</div>
+
+<div class="course-card">
+  <p class="course-name">Financing New Ventures</p>
+  <p class="course-meta">BUSI 461 · 3 cr</p>
+  <p class="course-desc">You'll build TAM/SAM/SOM models, evaluate term-sheet economics, craft pitch decks, and develop fundraising strategies. You'll learn that how you finance your business shapes what it can become.</p>
+  <p class="course-belief">"There are many different ways to finance many different types of businesses."</p>
+</div>
+
+<div class="course-card">
+  <p class="course-name">Entrepreneurial Strategy</p>
+  <p class="course-meta">BUSI 463 · 3 cr</p>
+  <p class="course-desc">You'll analyze case studies, navigate founder dilemmas with no clear right answer, and develop integrated strategy recommendations. Every strategic choice opens some doors and closes others.</p>
+  <p class="course-belief">"Strategy is about choosing what NOT to do, not just what to do."</p>
+</div>
+
+<div class="course-card">
+  <p class="course-name">Student Venture Fund (SVF)</p>
+  <p class="course-meta">BUSI 465 · 3 cr</p>
+  <p class="course-desc">You'll evaluate real ventures from the investor perspective — constructing investment theses, performing due diligence, and delivering formal recommendations to an Investment Committee.</p>
+  <p class="course-belief">"The skills of evaluating ventures are the same skills you need to build better ones."</p>
+</div>
+
 <hr />
-<h3 id="communicate-and-persuade">Communicate and Persuade</h3>
-<p><em>Tell stories. Pitch ideas. Write memos. Present to investors,
-customers, teammates, and strangers.</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Introduced</th>
-<th>Practiced</th>
-<th>Deepened</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Intro to Design (220)</strong> — Communicate stories, ideas,
-and reflections to diverse audiences</td>
-<td><strong>Communications (361)</strong> — Present in business
-contexts; network professionally; write emails; run meetings; manage
-conflicts</td>
-<td><strong>Financing (461)</strong> — Craft executive summary and pitch
-deck; tell a compelling founder story</td>
-</tr>
-<tr>
-<td><strong>Disco (221)</strong> — Articulate unique combination of
-skills, interests, and passion</td>
-<td><strong>DBS (365)</strong> — Demo working prototypes and articulate
-what was learned</td>
-<td><strong>Entrepreneurial Strategy (463)</strong> — Create personal
-pitch deck; present strategy recommendations</td>
-</tr>
-<tr>
-<td><strong>Founder's Journey (360)</strong> — Articulate what surprised
-them and how it changed their thinking</td>
-<td><strong>New Enterprises (369)</strong> — Deliver executive summary
-and final presentation</td>
-<td><strong>SVF (465)</strong> — Deliver formal investment
-recommendation to Investment Committee</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>BME (223)</strong> — Present findings to stakeholders
-(investors, cofounders, advisors)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="model-and-measure">Model and Measure</h3>
-<p><em>Create financial models. Define metrics. Use data to make
-decisions and track progress.</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Introduced</th>
-<th>Practiced</th>
-<th>Deepened</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>DBS (365)</strong> — Select and implement a metric aligned
-to a value creation hypothesis</td>
-<td><strong>BME (223)</strong> — Build bottoms-up cash flow model;
-identify assumptions and risks; iterate with increasing resolution</td>
-<td><strong>Financing (461)</strong> — Build TAM/SAM/SOM model; evaluate
-term-sheet economics; develop fundraising strategy</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>New Enterprises (369)</strong> — Systematically prioritize
-and eliminate risk through evidence</td>
-<td><strong>SVF (465)</strong> — Apply VC valuation methods; perform
-structured due diligence</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>NVC (469)</strong> — Present progress with data from prior
-experiments</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="navigate-ambiguity">Navigate Ambiguity</h3>
-<p><em>Persist in the discomfort of not knowing. Find a way forward
-without clear instructions.</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Introduced</th>
-<th>Practiced</th>
-<th>Deepened</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Intro to Design (220)</strong> — First encounter with
-open-ended, ambiguous challenges; no single right answer</td>
-<td><strong>DBS (365)</strong> — Sprint-based work where the next step
-isn't given; must decide what to build, test, and learn</td>
-<td><strong>NVC (469)</strong> — Self-directed venture execution;
-structured whitespace with coaching, not answers</td>
-</tr>
-<tr>
-<td><strong>Disco (221)</strong> — Explore industries without knowing
-where it leads; map stepping stones from uncertainty</td>
-<td><strong>New Enterprises (369)</strong> — Evaluate whether a problem
-is worth solving; translate ambiguity into testable hypotheses</td>
-<td><strong>Entrepreneurial Strategy (463)</strong> — Navigate founder
-dilemmas with no clear right answer; ethical tradeoffs</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>BME (223)</strong> — Interpret data and constraints in
-ambiguous circumstances; "all models are wrong, but some are
-useful"</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="self-direct">Self-Direct</h3>
-<p><em>Own your path. Set goals. Make strategic choices about what to
-pursue and how.</em></p>
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr>
-<th>Introduced</th>
-<th>Practiced</th>
-<th>Deepened</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Disco (221)</strong> — Map stepping stones from where they
-are to where they want to go; produce a portfolio of opportunities</td>
-<td><strong>DBS (365)</strong> — Propose next experiment based on
-learnings; decide persevere, pivot, or stop</td>
-<td><strong>NVC (469)</strong> — Set venture milestones and execute in
-2-week sprints; self-direct startup execution</td>
-</tr>
-<tr>
-<td><strong>Founder's Journey (360)</strong> — Reflect on
-entrepreneurial potential and readiness</td>
-<td><strong>Entrepreneurial Strategy (463)</strong> — Make strategic
-choices: customer, capabilities, competition, team</td>
-<td><strong>SVF (465)</strong> — Source companies; construct investment
-thesis; make real investment decisions</td>
-</tr>
-<tr>
-<td></td>
-<td><strong>Communications (361)</strong> — Use communication tools to
-facilitate internship, career exploration, or job search</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="what-students-come-to-believe">What Students Come to
-Believe</h2>
-<p>The abilities above describe what students can <em>do</em>. Equally
-important is what they come to <em>believe</em> — the mindset shifts and
-identity changes that stay with them. These are drawn from the Lilie
-Beliefs document where possible, supplemented with reasonable inferences
-from syllabi. Items marked <strong>(?)</strong> are best guesses.</p>
-<h3 id="about-themselves">About Themselves</h3>
-<ul>
-<li><strong>(?)</strong> "I can make things even if I'm not 'a
-designer'" — Intro to Design (220)</li>
-<li><strong>(?)</strong> "I can build and ship real things, not just
-assignments" — DBS (365)</li>
-<li><strong>(?)</strong> "I have talents relevant to entrepreneurship
-that I didn't recognize before" — Founder's Journey (360)</li>
-<li><strong>(?)</strong> "There are more paths available to me than I
-thought" — Disco (221)</li>
-<li><strong>(?)</strong> "I don't have to have it all figured out right
-now — but I can take the next step" — Disco (221)</li>
-</ul>
-<h3 id="about-process">About Process</h3>
-<ul>
-<li>"Don't be afraid to throw away what you built" — Intro to Design
-(220)</li>
-<li>"Lower the barrier to experimentation and trying new things" — Intro
-to Design (220), New Enterprises (369)</li>
-<li>"Focus on process as much as product — it's not just where you end
-up, but how you got there" — Intro to Design (220), DBS (365)</li>
-<li>"Building and shipping is the only way to move from theory to
-practice" — Intro to Design (220), New Enterprises (369), DBS (365)</li>
-<li><strong>(?)</strong> "Shipping something imperfect teaches you more
-than planning something perfect" — DBS (365)</li>
-<li><strong>(?)</strong> "Speed of learning matters more than speed of
-building" — DBS (365)</li>
-</ul>
-<h3 id="about-entrepreneurship">About Entrepreneurship</h3>
-<ul>
-<li>"You can start a business while in college" — New Enterprises (369),
-NVC (469)</li>
-<li>"You can start something that marries your passions with your
-purpose" — Disco (221)</li>
-<li>"The entrepreneurial mindset can support you in paths outside of
-entrepreneurship" — Disco (221), Founder's Journey (360)</li>
-<li>"The way to start a business is by having early contact with
-customers and users" — New Enterprises (369)</li>
-<li><strong>(?)</strong> "Entrepreneurship is not just about the idea —
-it's about consistent execution over time" — NVC (469)</li>
-<li><strong>(?)</strong> "Starting a company is hard, messy, and human —
-and that's okay" — Founder's Journey (360)</li>
-<li><strong>(?)</strong> "Grades don't matter as much as what I actually
-built and learned" — NVC (469)</li>
-<li><strong>(?)</strong> "The structured whitespace to work on my
-venture is what I needed to actually make progress" — NVC (469)</li>
-</ul>
-<h3 id="about-knowledge-and-expertise">About Knowledge and
-Expertise</h3>
-<ul>
-<li>"The best way to be inspired is by hearing it from people who have
-walked that path" — Founder's Journey (360)</li>
-<li>"If people can see it, they believe they can be it" — Founder's
-Journey (360)</li>
-<li><strong>(?)</strong> "Most startups fail not because the product was
-wrong, but because they didn't talk to customers early enough" — New
-Enterprises (369)</li>
-<li><strong>(?)</strong> "How you communicate your idea is as important
-as the idea itself" — Communications (361)</li>
-<li><strong>(?)</strong> "Communication is a skill you can practice and
-improve, not a talent you're born with" — Communications (361)</li>
-</ul>
-<h3 id="about-models-and-strategy">About Models and Strategy</h3>
-<ul>
-<li>"Creating a financial model for a startup is not the same as the
-financial model for an existing business" — BME (223)</li>
-<li>"You don't need to have a finance or business background to build a
-financial model" — BME (223)</li>
-<li>"A financial model is a prototype — developing a model requires
-being generative, creative, and iterative" — BME (223)</li>
-<li><strong>(?)</strong> "Being messy is okay — 'all models are wrong,
-but some are useful'" — BME (223)</li>
-<li><strong>(?)</strong> "A financial model is a decision-making tool,
-not a prediction machine" — BME (223)</li>
-<li>"There are many different ways to finance many different types of
-businesses" — Financing (461)</li>
-<li><strong>(?)</strong> "Fundraising is as much art as science — too
-little runway and you stall, too much dilution and you lose control" —
-Financing (461)</li>
-<li><strong>(?)</strong> "The right financing strategy depends on the
-type of business you're building" — Financing (461)</li>
-<li><strong>(?)</strong> "Understanding the investor's perspective makes
-you a better founder" — Financing (461)</li>
-<li>"There are many paths through the maze of entrepreneurship and
-making choices have trade-offs" — Entrepreneurial Strategy (463)</li>
-<li><strong>(?)</strong> "To achieve competitive advantage,
-entrepreneurs must balance experimentation with strategic commitment" —
-Entrepreneurial Strategy (463)</li>
-<li><strong>(?)</strong> "The strategic choices you make early constrain
-— or enable — everything that comes after" — Entrepreneurial Strategy
-(463)</li>
-<li><strong>(?)</strong> "Strategy is about choosing what NOT to do, not
-just what to do" — Entrepreneurial Strategy (463)</li>
-</ul>
-<h3 id="about-products-and-technology">About Products and
-Technology</h3>
-<ul>
-<li>"Building, launching, and managing technology products requires the
-intersectional expertise of technology, business, and design" — TPDD
-(222)</li>
-<li><strong>(?)</strong> "Good products come from understanding people,
-not just technology" — TPDD (222)</li>
-<li><strong>(?)</strong> "The PM role is about connecting dots across
-design, engineering, and business" — TPDD (222)</li>
-</ul>
-<h3 id="about-investing">About Investing</h3>
-<ul>
-<li><strong>(?)</strong> "Evaluating startups from the investor side
-deepens your understanding of what makes a venture work" — SVF
-(465)</li>
-<li><strong>(?)</strong> "The skills of evaluating ventures are the same
-skills you need to build better ones" — SVF (465)</li>
-</ul>
-<hr />
-<h2 id="courses-on-the-roadmap">Courses on the Roadmap</h2>
-<p>Two planned courses will extend the ability set:</p>
-<p><strong>Innovation for Social Impact</strong> <em>(Target: Fall
-2026)</em> — <strong>(?)</strong> Expected to develop Learn from Others
-and Synthesize and Frame in the context of social systems, and to
-introduce the belief that innovation and social impact reinforce each
-other.</p>
-<p><strong>Revenue Generation for Entrepreneurs</strong> <em>(Target:
-Spring 2027)</em> — <strong>(?)</strong> Expected to develop Build and
-Ship and Model and Measure toward distribution, sales, and revenue, and
-to introduce the belief that revenue is a form of validation that tells
-you something free signups can't.</p>
-<hr />
-<h2 id="how-to-read-this-map">How to Read This Map</h2>
-<p><strong>The Abilities</strong> are organized from most broadly shared
-across the curriculum to most specialized. "Introduced" means students
-encounter the ability for the first time. "Practiced" means they apply
-it with increasing independence. "Deepened" means it becomes
-professional-grade or self-directed.</p>
-<p><strong>The Beliefs</strong> are grouped by theme rather than by
-course, to show the cumulative worldview the Lilie curriculum builds.
-Course names in parentheses indicate where each belief is most strongly
-developed.</p>
-<p>Items marked <strong>(?)</strong> are best guesses to be corrected
-and filled in.</p>
-<hr />
-<p><em>Generated from full syllabi (Spring 2026 / Fall 2025), the Lilie
-Beliefs document, and the Lilie Academic Roadmap. Structure inspired by
-the Stanford d.school's design abilities framework.</em></p>
+
+<p class="footer">Generated from course syllabi (Spring 2026 / Fall 2025), the Lilie Beliefs document, and the Lilie Academic Roadmap.</p>
+
 </div>
 </body>
 </html>
